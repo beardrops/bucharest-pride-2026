@@ -38,15 +38,22 @@
                             <x-input-error :messages="$errors->get('location')" class="mt-2" />
                         </div>
 
+                        <div>
+                            <x-input-label for="maps_url" :value="__('Google Maps Embed URL')" />
+                            <x-text-input id="maps_url" class="mt-1 block w-full" type="url" name="maps_url" :value="old('maps_url', $event->maps_url)" placeholder="https://www.google.com/maps/embed?pb=..." />
+                            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Paste the embed URL from Google Maps (Share → Embed a map → Copy HTML &amp; extract the src).</p>
+                            <x-input-error :messages="$errors->get('maps_url')" class="mt-2" />
+                        </div>
+
                         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <div>
                                 <x-input-label for="start_date" :value="__('Start Date')" />
-                                <x-text-input id="start_date" class="mt-1 block w-full" type="datetime-local" name="start_date" :value="old('start_date', $event->start_date?->format('Y-m-d\TH:i'))" required />
+                                <x-text-input id="start_date" class="datepicker mt-1 block w-full" type="text" name="start_date" :value="old('start_date', $event->start_date?->format('Y-m-d H:i:s'))" required />
                                 <x-input-error :messages="$errors->get('start_date')" class="mt-2" />
                             </div>
                             <div>
                                 <x-input-label for="end_date" :value="__('End Date')" />
-                                <x-text-input id="end_date" class="mt-1 block w-full" type="datetime-local" name="end_date" :value="old('end_date', $event->end_date?->format('Y-m-d\TH:i'))" required />
+                                <x-text-input id="end_date" class="datepicker mt-1 block w-full" type="text" name="end_date" :value="old('end_date', $event->end_date?->format('Y-m-d H:i:s'))" required />
                                 <x-input-error :messages="$errors->get('end_date')" class="mt-2" />
                             </div>
                         </div>

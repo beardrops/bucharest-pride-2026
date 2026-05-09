@@ -39,6 +39,11 @@
                         <div>
                             <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Location</dt>
                             <dd class="mt-1 text-gray-700 dark:text-gray-300">{{ $event->location }}</dd>
+                            @if($event->maps_url)
+                                <dd class="mt-3">
+                                    <iframe src="{{ $event->maps_url }}" width="100%" height="300" style="border:0; border-radius: 0.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </dd>
+                            @endif
                         </div>
                         <div class="grid grid-cols-2 gap-4">
                             <div>

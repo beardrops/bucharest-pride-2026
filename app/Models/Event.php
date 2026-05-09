@@ -16,6 +16,7 @@ class Event extends Model
         'slug',
         'description',
         'location',
+        'maps_url',
         'start_date',
         'end_date',
         'image',
