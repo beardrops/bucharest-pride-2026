@@ -4,16 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/favicon.png">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Bucharest Pride') }} — Bucharest Pride 2026</title>
     @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased bg-white text-gray-900">
+<body class="font-sans antialiased bg-white text-pride-black">
 
 @include('partials.navbar')
 
-<section class="pt-32 pb-20 bg-gradient-to-br from-pink-600 via-purple-700 to-indigo-900 text-white text-center">
+<section class="pt-32 pb-20 bg-gradient-to-br from-pride-pink via-pride-navy to-pride-navy text-white text-center">
     <div class="max-w-4xl mx-auto px-4">
         <h1 class="text-5xl font-bold mb-4">Bucharest Pride 2026</h1>
         <p class="text-xl text-white/80">{{ __('June 27 – July 5, 2026') }}</p>
@@ -28,21 +29,21 @@
             <span class="w-3 h-3 rounded-full bg-green-500"></span>
             <span class="w-3 h-3 rounded-full bg-blue-500"></span>
             <span class="w-3 h-3 rounded-full bg-purple-600"></span>
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white ml-2">{{ __('Manifest') }}</h2>
+            <h2 class="text-3xl font-bold text-pride-black dark:text-white ml-2">{{ __('Manifest') }}</h2>
         </div>
-        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-6">
             {{ __('Bucharest Pride is a political act. We march not just to celebrate, but to demand our rights. In Romania, LGBTQ+ people still face discrimination, lack of legal recognition for same-sex families, and daily challenges to their dignity.') }}
         </p>
-        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-6">
             {{ __('We demand marriage equality. We demand protection from discrimination. We demand the right to live openly and authentically without fear. We stand in solidarity with trans and non-binary people, whose rights are under attack across Europe.') }}
         </p>
-        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed">
             {{ __('Equality is not debated. It is guaranteed.') }}
         </p>
     </div>
 </section>
 
-<section id="march" class="py-20 bg-gray-50 dark:bg-gray-900">
+<section id="march" class="py-20 bg-pride-gray dark:bg-pride-black">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center gap-3 mb-6">
             <span class="w-3 h-3 rounded-full bg-red-500"></span>
@@ -50,21 +51,21 @@
             <span class="w-3 h-3 rounded-full bg-green-500"></span>
             <span class="w-3 h-3 rounded-full bg-blue-500"></span>
             <span class="w-3 h-3 rounded-full bg-purple-600"></span>
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white ml-2">{{ __('March') }}</h2>
+            <h2 class="text-3xl font-bold text-pride-black dark:text-white ml-2">{{ __('March') }}</h2>
         </div>
-        <p class="text-xl text-pink-600 dark:text-pink-400 font-semibold mb-4">{{ __('Saturday, July 5, 2026') }}</p>
-        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+        <p class="text-xl text-pride-pink dark:text-pride-pink font-semibold mb-4">{{ __('Saturday, July 5, 2026') }}</p>
+        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-6">
             {{ __('Parade description') }}
         </p>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm">
-            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">{{ __('Parade Route') }}</h3>
+        <div class="bg-white dark:bg-pride-black rounded-2xl p-8 shadow-sm">
+            <h3 class="text-lg font-bold text-pride-black dark:text-white mb-4">{{ __('Parade Route') }}</h3>
             <div class="grid sm:grid-cols-2 gap-4 text-sm">
                 <div>
-                    <p class="font-semibold text-gray-900 dark:text-white">{{ __('Start') }}: Piața Universității</p>
+                    <p class="font-semibold text-pride-black dark:text-white">{{ __('Start') }}: Piața Universității</p>
                     <p class="text-gray-500">10:00 AM</p>
                 </div>
                 <div>
-                    <p class="font-semibold text-gray-900 dark:text-white">{{ __('End') }}: Piața Victoriei</p>
+                    <p class="font-semibold text-pride-black dark:text-white">{{ __('End') }}: Piața Victoriei</p>
                     <p class="text-gray-500">~14:00</p>
                 </div>
             </div>

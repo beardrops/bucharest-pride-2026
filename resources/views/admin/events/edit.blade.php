@@ -1,14 +1,14 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
+        <h2 class="text-xl font-semibold leading-tight text-pride-black dark:text-white/90">
             {{ __('Edit Event') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="mx-auto max-w-3xl sm:px-6 lg:px-8">
-            <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg dark:bg-gray-800">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
+            <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg dark:bg-pride-black">
+                <div class="p-6 text-pride-black dark:text-white">
                     <form method="POST" action="{{ route('admin.events.update', $event) }}" enctype="multipart/form-data" class="space-y-6">
                         @csrf
                         @method('PUT')
@@ -22,13 +22,13 @@
                         <div>
                             <x-input-label for="slug" :value="__('Slug (optional)')" />
                             <x-text-input id="slug" class="mt-1 block w-full" type="text" name="slug" :value="old('slug', $event->slug)" />
-                            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Leave empty to auto-generate from title.</p>
+                            <p class="mt-1 text-xs text-gray-500 dark:text-white/60">Leave empty to auto-generate from title.</p>
                             <x-input-error :messages="$errors->get('slug')" class="mt-2" />
                         </div>
 
                         <div>
                             <x-input-label for="description" :value="__('Description')" />
-                            <textarea id="description" name="description" rows="6" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-indigo-600 dark:focus:ring-indigo-600">{{ old('description', $event->description) }}</textarea>
+                            <textarea id="description" name="description" rows="6" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-pride-blue focus:ring-pride-blue dark:border-pride-black dark:bg-pride-black dark:text-white/70 dark:focus:border-pride-blue dark:focus:ring-pride-blue">{{ old('description', $event->description) }}</textarea>
                             <x-input-error :messages="$errors->get('description')" class="mt-2" />
                         </div>
 
@@ -41,7 +41,7 @@
                         <div>
                             <x-input-label for="maps_url" :value="__('Google Maps Embed URL')" />
                             <x-text-input id="maps_url" class="mt-1 block w-full" type="url" name="maps_url" :value="old('maps_url', $event->maps_url)" placeholder="https://www.google.com/maps/embed?pb=..." />
-                            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Paste the embed URL from Google Maps (Share → Embed a map → Copy HTML &amp; extract the src).</p>
+                            <p class="mt-1 text-xs text-gray-500 dark:text-white/60">Paste the embed URL from Google Maps (Share → Embed a map → Copy HTML &amp; extract the src).</p>
                             <x-input-error :messages="$errors->get('maps_url')" class="mt-2" />
                         </div>
 
@@ -65,18 +65,18 @@
                                     <img src="{{ Storage::url($event->image) }}" alt="{{ $event->title }}" class="h-32 w-auto rounded object-cover shadow-sm">
                                 </div>
                             @endif
-                            <input id="image" type="file" name="image" accept="image/jpg,image/jpeg,image/png,image/webp" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-indigo-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-indigo-700 hover:file:bg-indigo-100 dark:file:bg-indigo-900/50 dark:file:text-indigo-300" />
+                            <input id="image" type="file" name="image" accept="image/jpg,image/jpeg,image/png,image/webp" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-pride-pink-light file:px-4 file:py-2 file:text-sm file:font-semibold file:text-pride-blue hover:file:bg-pride-pink-light dark:file:bg-pride-navy/50 dark:file:text-pride-pink" />
                             <x-input-error :messages="$errors->get('image')" class="mt-2" />
                         </div>
 
                         <div class="flex items-center gap-2">
-                            <input id="is_published" type="checkbox" name="is_published" value="1" {{ old('is_published', $event->is_published) ? 'checked' : '' }} class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-indigo-600">
+                            <input id="is_published" type="checkbox" name="is_published" value="1" {{ old('is_published', $event->is_published) ? 'checked' : '' }} class="rounded border-gray-300 text-pride-blue shadow-sm focus:ring-pride-blue dark:border-pride-black dark:bg-pride-black dark:focus:ring-pride-blue">
                             <x-input-label for="is_published" :value="__('Published')" />
                         </div>
 
                         <div class="flex items-center gap-4">
                             <x-primary-button>{{ __('Update Event') }}</x-primary-button>
-                            <a href="{{ route('admin.events.index') }}" class="text-sm text-gray-600 hover:underline dark:text-gray-400">Cancel</a>
+                            <a href="{{ route('admin.events.index') }}" class="text-sm text-gray-600 hover:underline dark:text-white/60">Cancel</a>
                         </div>
                     </form>
                 </div>

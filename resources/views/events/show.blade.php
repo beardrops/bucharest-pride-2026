@@ -4,18 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/favicon.png">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Bucharest Pride') }} — {{ $event->title }}</title>
     @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased bg-white text-gray-900">
+<body class="font-sans antialiased bg-white text-pride-black">
 
 @include('partials.navbar')
 
 <section class="pt-32 pb-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <a href="{{ route('events.index') }}" class="text-sm text-pink-600 hover:underline mb-4 inline-block">&larr; {{ __('All Events') }}</a>
+        <a href="{{ route('events.index') }}" class="text-sm text-pride-pink hover:underline mb-4 inline-block">&larr; {{ __('All Events') }}</a>
 
         @if($event->image)
             <div class="mb-8 rounded-2xl overflow-hidden shadow-md">
@@ -23,9 +24,9 @@
             </div>
         @endif
 
-        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">{{ $event->title }}</h1>
+        <h1 class="text-4xl sm:text-5xl font-bold text-pride-black dark:text-white mb-4">{{ $event->title }}</h1>
 
-        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-8">
+        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-white/60 mb-8">
             <span class="flex items-center gap-1">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                 {{ $event->start_date->format('F j, Y') }}{{ $event->end_date && $event->end_date->format('M j') !== $event->start_date->format('M j') ? ' — ' . $event->end_date->format('F j, Y') : '' }}
@@ -36,7 +37,7 @@
             </span>
         </div>
 
-        <div class="prose prose-lg max-w-none dark:prose-invert text-gray-600 dark:text-gray-400 leading-relaxed mb-10">
+        <div class="prose prose-lg max-w-none dark:prose-invert text-gray-600 dark:text-white/60 leading-relaxed mb-10">
             {{ $event->description }}
         </div>
 
