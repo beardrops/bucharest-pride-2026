@@ -57,4 +57,10 @@ Route::middleware('auth')->group(function () {
         ->names('admin.events');
 });
 
-require __DIR__.'/auth.php';
+Route::get('/theme/{theme}', function (string $theme) {
+    if (!in_array($theme, ['pride', 'corporate'])) {
+        abort(404);
+    }
+    session()->put('theme', $theme);
+    return redirect()->back();
+})->name('theme.switch');
