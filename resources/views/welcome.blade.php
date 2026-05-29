@@ -17,39 +17,41 @@
 
 {{-- HERO --}}
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-pride-navy via-pride-pink to-pride-pink"></div>
-    <div class="absolute inset-0 opacity-20"
-         style="background-image: linear-gradient(45deg, #fff 25%, transparent 25%), linear-gradient(-45deg, #fff 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #fff 75%), linear-gradient(-45deg, transparent 75%, #fff 75%);
-                background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;"></div>
+    <div class="absolute inset-0">
+        <img src="/images/hero_image.jpg" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-br from-pride-navy/80 via-pride-pink/60 to-pride-pink/80"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-pride-navy/60 via-transparent to-transparent"></div>
 
     <div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
-        <div class="flex justify-center gap-1.5 mb-8">
-            <span class="w-4 h-4 rounded-full bg-red-400"></span>
-            <span class="w-4 h-4 rounded-full bg-orange-400"></span>
-            <span class="w-4 h-4 rounded-full bg-yellow-300"></span>
-            <span class="w-4 h-4 rounded-full bg-green-400"></span>
-            <span class="w-4 h-4 rounded-full bg-blue-400"></span>
-            <span class="w-4 h-4 rounded-full bg-purple-400"></span>
-        </div>
+        <div class="bg-pride-black/20 backdrop-blur-sm rounded-3xl p-8 sm:p-12 border border-white/10 shadow-2xl">
+            <div class="flex justify-center gap-1.5 mb-8">
+                <span class="w-4 h-4 rounded-full bg-red-400 shadow-lg"></span>
+                <span class="w-4 h-4 rounded-full bg-orange-400 shadow-lg"></span>
+                <span class="w-4 h-4 rounded-full bg-yellow-300 shadow-lg"></span>
+                <span class="w-4 h-4 rounded-full bg-green-400 shadow-lg"></span>
+                <span class="w-4 h-4 rounded-full bg-blue-400 shadow-lg"></span>
+                <span class="w-4 h-4 rounded-full bg-purple-400 shadow-lg"></span>
+            </div>
 
-        <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold text-white leading-tight mb-4 tracking-tight">
-            Bucharest<br><span class="text-yellow-300">Pride</span>
-        </h1>
+            <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold text-white leading-tight mb-4 tracking-tight drop-shadow-lg">
+                Bucharest<br><span class="text-yellow-300">Pride</span>
+            </h1>
 
-        <p class="text-xl sm:text-2xl md:text-3xl text-white/90 font-light mb-3">{{ __('June 27 – July 5, 2026') }}</p>
+            <p class="text-xl sm:text-2xl md:text-3xl text-white font-light mb-3 drop-shadow">{{ __('June 27 – July 5, 2026') }}</p>
 
-        <p class="text-lg text-white/80 font-light mb-10 max-w-2xl mx-auto">
-            {{ __('Celebrate diversity. Demand equality. Unite for love.') }}
-        </p>
+            <p class="text-lg text-white/90 font-light mb-10 max-w-2xl mx-auto drop-shadow">
+                {{ __('Celebrate diversity. Demand equality. Unite for love.') }}
+            </p>
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="#events" class="inline-flex items-center px-8 py-3.5 rounded-full bg-white text-pride-navy font-semibold text-base hover:bg-yellow-300 hover:text-pride-navy transition shadow-lg">
-                {{ __('See the Program') }}
-            </a>
-            <a href="#support" class="inline-flex items-center px-8 py-3.5 rounded-full bg-pride-pink text-white font-semibold text-base hover:bg-pride-pink transition shadow-lg">
-                {{ __('Donate') }}
-            </a>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#events" class="inline-flex items-center px-8 py-3.5 rounded-full bg-white text-pride-navy font-semibold text-base hover:bg-yellow-300 hover:text-pride-navy transition shadow-xl">
+                    {{ __('See the Program') }}
+                </a>
+                <a href="#support" class="inline-flex items-center px-8 py-3.5 rounded-full bg-pride-pink text-white font-semibold text-base hover:bg-pride-pink transition shadow-xl">
+                    {{ __('Donate') }}
+                </a>
+            </div>
         </div>
     </div>
 

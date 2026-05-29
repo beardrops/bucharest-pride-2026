@@ -1,11 +1,11 @@
 <nav x-data="{ open: false, scrolled: false }"
      x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 50)"
      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-     :class="scrolled ? 'bg-white/95 dark:bg-pride-black/95 backdrop-blur shadow-sm' : 'bg-transparent'">
+     :class="scrolled ? 'bg-white/95 dark:bg-pride-black/95 backdrop-blur shadow-sm' : 'bg-pride-black/30 backdrop-blur-sm border-b border-white/10'">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-20">
             <a href="{{ route('home') }}" class="flex items-center gap-2 shrink-0">
-                <img src="/images/logo_bucharest_pride.png" alt="{{ __('BucharestPride') }}" class="h-8 w-auto">
+                <img src="/images/logo_bucharest_pride.png" alt="{{ __('BucharestPride') }}" class="h-8 w-auto" :class="scrolled ? '' : 'brightness-0 invert'">
             </a>
             <div class="hidden lg:flex items-center gap-6">
                 {{-- About Us --}}
