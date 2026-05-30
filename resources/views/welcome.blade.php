@@ -20,25 +20,14 @@
     <div class="absolute inset-0">
         <img src="/images/hero_image.jpg" alt="" class="w-full h-full object-cover">
     </div>
-    <div class="absolute inset-0 bg-gradient-to-br from-pride-navy/80 via-pride-pink/60 to-pride-pink/80"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-pride-navy/60 via-transparent to-transparent"></div>
-
-    <div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
-        <div class="bg-pride-black/20 backdrop-blur-sm rounded-3xl p-8 sm:p-12 border border-white/10 shadow-2xl">
-            <div class="flex justify-center gap-1.5 mb-8">
-                <span class="w-4 h-4 rounded-full bg-red-400 shadow-lg"></span>
-                <span class="w-4 h-4 rounded-full bg-orange-400 shadow-lg"></span>
-                <span class="w-4 h-4 rounded-full bg-yellow-300 shadow-lg"></span>
-                <span class="w-4 h-4 rounded-full bg-green-400 shadow-lg"></span>
-                <span class="w-4 h-4 rounded-full bg-blue-400 shadow-lg"></span>
-                <span class="w-4 h-4 rounded-full bg-purple-400 shadow-lg"></span>
-            </div>
+    <div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto w-full">
+        <div class="bg-pride-black/20 backdrop-blur-sm rounded-3xl p-6 sm:p-10 md:p-12 border border-white/10 shadow-2xl">
 
             <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold text-white leading-tight mb-4 tracking-tight drop-shadow-lg">
-                Bucharest<br><span class="text-yellow-300">Pride</span>
+                Bucharest<br><span class="text-yellow-300">PRIDE</span>
             </h1>
 
-            <p class="text-xl sm:text-2xl md:text-3xl text-white font-light mb-3 drop-shadow">{{ __('June 27 – July 5, 2026') }}</p>
+            <p class="text-xl sm:text-2xl md:text-3xl text-white font-light mb-3 drop-shadow">3 June – 13 June 2026</p>
 
             <p class="text-lg text-white/90 font-light mb-10 max-w-2xl mx-auto drop-shadow">
                 {{ __('Celebrate diversity. Demand equality. Unite for love.') }}
@@ -62,49 +51,53 @@
     </div>
 </section>
 
-{{-- COUNTDOWN --}}
-<section class="py-16 bg-pride-gray dark:bg-pride-black">
-    <div x-data="countdown('2026-06-27T10:00:00')" x-init="init(); setInterval(init, 1000)"
-         class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <p class="text-sm font-semibold uppercase tracking-widest text-pride-pink dark:text-pride-pink mb-2">{{ __("It's getting closer!") }}</p>
-        <h2 class="text-3xl sm:text-4xl font-bold text-pride-black dark:text-white mb-8">{{ __('Bucharest Pride 2026') }}</h2>
-        <div class="grid grid-cols-4 gap-4 sm:gap-8 max-w-xl mx-auto">
-            <div class="bg-white dark:bg-pride-black rounded-2xl shadow-sm p-4">
-                <div class="text-4xl sm:text-5xl font-bold text-pride-navy dark:text-pride-pink" x-text="days">00</div>
-                <div class="text-xs sm:text-sm text-gray-500 dark:text-white/60 mt-1 uppercase tracking-wider">{{ __('Days') }}</div>
+{{-- VOLUNTEER / SUPPORT --}}
+<section id="support" class="py-20 sm:py-28 bg-pride-gray dark:bg-pride-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+            <p class="text-sm font-semibold uppercase tracking-widest text-pride-pink dark:text-pride-pink mb-3">{{ __('Get Involved') }}</p>
+            <h2 class="text-3xl sm:text-4xl font-bold text-pride-black dark:text-white mb-4">{{ __('Ways to Support Bucharest Pride') }}</h2>
+            <p class="text-gray-600 dark:text-white/60 max-w-2xl mx-auto">
+                {{ __('Support subtitle') }}
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white dark:bg-pride-black rounded-2xl p-8 shadow-sm hover:shadow-md transition text-center group">
+                <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-pride-pink-light dark:bg-pride-navy/30 flex items-center justify-center group-hover:bg-pride-pink-light dark:group-hover:bg-pride-navy/50 transition">
+                    <svg class="w-8 h-8 text-pride-navy dark:text-pride-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-pride-black dark:text-white mb-2">{{ __('Volunteer') }}</h3>
+                <p class="text-gray-600 dark:text-white/60 text-sm">{{ __('Volunteer desc') }}</p>
+                <a href="#" class="inline-block mt-6 text-sm font-semibold text-pride-navy dark:text-pride-pink hover:underline">{{ __('Volunteer Today →') }}</a>
             </div>
-            <div class="bg-white dark:bg-pride-black rounded-2xl shadow-sm p-4">
-                <div class="text-4xl sm:text-5xl font-bold text-pride-pink dark:text-pride-pink" x-text="hours">00</div>
-                <div class="text-xs sm:text-sm text-gray-500 dark:text-white/60 mt-1 uppercase tracking-wider">{{ __('Hours') }}</div>
+
+            <div class="bg-white dark:bg-pride-black rounded-2xl p-8 shadow-sm hover:shadow-md transition text-center group">
+                <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-pride-pink-light dark:bg-pride-pink/30 flex items-center justify-center group-hover:bg-pride-pink-light dark:group-hover:bg-pride-pink/50 transition">
+                    <svg class="w-8 h-8 text-pride-pink dark:text-pride-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-pride-black dark:text-white mb-2">{{ __('Donate') }}</h3>
+                <p class="text-gray-600 dark:text-white/60 text-sm">{{ __('Donate desc') }}</p>
+                <a href="#" class="inline-block mt-6 text-sm font-semibold text-pride-pink dark:text-pride-pink hover:underline">{{ __('Donate Now →') }}</a>
             </div>
-            <div class="bg-white dark:bg-pride-black rounded-2xl shadow-sm p-4">
-                <div class="text-4xl sm:text-5xl font-bold text-orange-500 dark:text-orange-400" x-text="minutes">00</div>
-                <div class="text-xs sm:text-sm text-gray-500 dark:text-white/60 mt-1 uppercase tracking-wider">{{ __('Minutes') }}</div>
-            </div>
-            <div class="bg-white dark:bg-pride-black rounded-2xl shadow-sm p-4">
-                <div class="text-4xl sm:text-5xl font-bold text-pride-blue dark:text-green-400" x-text="seconds">00</div>
-                <div class="text-xs sm:text-sm text-gray-500 dark:text-white/60 mt-1 uppercase tracking-wider">{{ __('Seconds') }}</div>
+
+            <div class="bg-white dark:bg-pride-black rounded-2xl p-8 shadow-sm hover:shadow-md transition text-center group">
+                <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-pride-pink-light dark:bg-pride-blue/30 flex items-center justify-center group-hover:bg-pride-pink-light dark:group-hover:bg-pride-blue/50 transition">
+                    <svg class="w-8 h-8 text-pride-blue dark:text-pride-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-pride-black dark:text-white mb-2">{{ __('Sponsor') }}</h3>
+                <p class="text-gray-600 dark:text-white/60 text-sm">{{ __('Sponsor desc') }}</p>
+                <a href="#" class="inline-block mt-6 text-sm font-semibold text-pride-blue dark:text-pride-blue hover:underline">{{ __('Become a Sponsor →') }}</a>
             </div>
         </div>
     </div>
 </section>
-
-<script>
-    function countdown(targetDate) {
-        return {
-            days: '00', hours: '00', minutes: '00', seconds: '00',
-            init() {
-                const target = new Date(targetDate).getTime();
-                const now = new Date().getTime();
-                const diff = Math.max(0, target - now);
-                this.days = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
-                this.hours = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-                this.minutes = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-                this.seconds = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
-            }
-        }
-    }
-</script>
 
 {{-- ABOUT --}}
 <section id="about" class="py-20 sm:py-28">
@@ -143,6 +136,75 @@
                     <div class="text-sm text-gray-600 dark:text-white/60 mt-2">{{ __('Largest in Romania') }}</div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+{{-- COUNTDOWN --}}
+<section class="py-16 bg-pride-gray dark:bg-pride-black">
+    <div x-data="countdown('2026-06-13T17:00:00')" x-init="init(); setInterval(() => init(), 1000)"
+         class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-pride-pink dark:text-pride-pink mb-2">{{ __("It's getting closer!") }}</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-pride-black dark:text-white mb-8">{{ __('Bucharest Pride 2026') }}</h2>
+        <div class="grid grid-cols-4 gap-4 sm:gap-8 max-w-xl mx-auto">
+            <div class="bg-white dark:bg-pride-black rounded-2xl shadow-sm p-4">
+                <div class="text-4xl sm:text-5xl font-bold tabular-nums text-pride-navy dark:text-pride-pink" x-text="days">00</div>
+                <div class="text-xs sm:text-sm text-gray-500 dark:text-white/60 mt-1 uppercase tracking-wider">{{ __('Days') }}</div>
+            </div>
+            <div class="bg-white dark:bg-pride-black rounded-2xl shadow-sm p-4">
+                <div class="text-4xl sm:text-5xl font-bold tabular-nums text-pride-pink dark:text-pride-pink" x-text="hours">00</div>
+                <div class="text-xs sm:text-sm text-gray-500 dark:text-white/60 mt-1 uppercase tracking-wider">{{ __('Hours') }}</div>
+            </div>
+            <div class="bg-white dark:bg-pride-black rounded-2xl shadow-sm p-4">
+                <div class="text-4xl sm:text-5xl font-bold tabular-nums text-orange-500 dark:text-orange-400" x-text="minutes">00</div>
+                <div class="text-xs sm:text-sm text-gray-500 dark:text-white/60 mt-1 uppercase tracking-wider">{{ __('Minutes') }}</div>
+            </div>
+            <div class="bg-white dark:bg-pride-black rounded-2xl shadow-sm p-4">
+                <div class="text-4xl sm:text-5xl font-bold tabular-nums text-pride-blue dark:text-green-400" x-text="seconds">00</div>
+                <div class="text-xs sm:text-sm text-gray-500 dark:text-white/60 mt-1 uppercase tracking-wider">{{ __('Seconds') }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function countdown(targetDate) {
+        return {
+            days: '00', hours: '00', minutes: '00', seconds: '00',
+            init() {
+                const target = new Date(targetDate).getTime();
+                const now = new Date().getTime();
+                const diff = Math.max(0, target - now);
+                this.days = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+                this.hours = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                this.minutes = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                this.seconds = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+            }
+        }
+    }
+</script>
+
+{{-- PARADE SECTION --}}
+<section id="parade" class="py-20 sm:py-28 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-pride-pink via-pride-navy to-pride-navy"></div>
+    <div class="absolute inset-0 opacity-10"
+         style="background-image: linear-gradient(45deg, #fff 25%, transparent 25%), linear-gradient(-45deg, #fff 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #fff 75%), linear-gradient(-45deg, transparent 75%, #fff 75%);
+                background-size: 30px 30px; background-position: 0 0, 0 15px, 15px -15px, -15px 0px;"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-yellow-300 mb-3">{{ __('Pride Parade') }}</p>
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            {{ __('March with Us') }}
+        </h2>
+        <p class="text-xl text-white/80 max-w-3xl mx-auto mb-4">
+            {{ __('Saturday, July 5, 2026') }}
+        </p>
+        <p class="text-lg text-white/70 max-w-2xl mx-auto mb-10">
+            {{ __('Parade description') }}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{{ route('events.index') }}" class="inline-flex items-center px-8 py-3.5 rounded-full border-2 border-white text-white font-semibold text-base hover:bg-white hover:text-pride-navy transition">
+                {{ __('Parade Info & Route') }}
+            </a>
         </div>
     </div>
 </section>
@@ -216,112 +278,6 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
             </a>
-        </div>
-    </div>
-</section>
-
-{{-- PARADE SECTION --}}
-<section id="parade" class="py-20 sm:py-28 relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-pride-pink via-pride-navy to-pride-navy"></div>
-    <div class="absolute inset-0 opacity-10"
-         style="background-image: linear-gradient(45deg, #fff 25%, transparent 25%), linear-gradient(-45deg, #fff 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #fff 75%), linear-gradient(-45deg, transparent 75%, #fff 75%);
-                background-size: 30px 30px; background-position: 0 0, 0 15px, 15px -15px, -15px 0px;"></div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p class="text-sm font-semibold uppercase tracking-widest text-yellow-300 mb-3">{{ __('Pride Parade') }}</p>
-        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            {{ __('March with Us') }}
-        </h2>
-        <p class="text-xl text-white/80 max-w-3xl mx-auto mb-4">
-            {{ __('Saturday, July 5, 2026') }}
-        </p>
-        <p class="text-lg text-white/70 max-w-2xl mx-auto mb-10">
-            {{ __('Parade description') }}
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="{{ route('events.index') }}" class="inline-flex items-center px-8 py-3.5 rounded-full border-2 border-white text-white font-semibold text-base hover:bg-white hover:text-pride-navy transition">
-                {{ __('Parade Info & Route') }}
-            </a>
-        </div>
-    </div>
-</section>
-
-{{-- RIGHTS SECTION --}}
-<section class="py-20 sm:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <p class="text-sm font-semibold uppercase tracking-widest text-pride-pink dark:text-pride-pink mb-3">{{ __('Human Rights') }}</p>
-                <h2 class="text-3xl sm:text-4xl font-bold text-pride-black dark:text-white mb-6 leading-tight">
-                    <span class="text-pride-pink dark:text-pride-pink">{{ __('Equality is not debated.') }}</span><br>
-                    {{ __('It is guaranteed.') }}
-                </h2>
-                <p class="text-gray-600 dark:text-white/60 text-lg leading-relaxed mb-6">
-                    {{ __('Rights description') }}
-                </p>
-                <a href="#" class="inline-flex items-center px-6 py-3 rounded-full bg-pride-pink text-white font-semibold hover:bg-pride-pink transition shadow">
-                    {{ __('Learn About Our Advocacy') }}
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="relative">
-                <div class="aspect-square rounded-2xl bg-gradient-to-br from-pride-pink-light via-pride-pink-light to-pride-pink-light dark:from-pride-pink/20 dark:via-pride-navy/20 dark:to-pride-navy/20 flex items-center justify-center p-12">
-                    <div class="text-center">
-                        <div class="text-8xl sm:text-9xl font-black text-pride-pink dark:text-pride-pink leading-none mb-2">=</div>
-                        <p class="text-2xl font-bold text-pride-black dark:text-white">{{ __('EQUALITY') }}</p>
-                        <p class="text-gray-500 dark:text-white/60 mt-2">{{ __('is a human right') }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- VOLUNTEER / SUPPORT --}}
-<section id="support" class="py-20 sm:py-28 bg-pride-gray dark:bg-pride-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-14">
-            <p class="text-sm font-semibold uppercase tracking-widest text-pride-pink dark:text-pride-pink mb-3">{{ __('Get Involved') }}</p>
-            <h2 class="text-3xl sm:text-4xl font-bold text-pride-black dark:text-white mb-4">{{ __('Ways to Support Bucharest Pride') }}</h2>
-            <p class="text-gray-600 dark:text-white/60 max-w-2xl mx-auto">
-                {{ __('Support subtitle') }}
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-white dark:bg-pride-black rounded-2xl p-8 shadow-sm hover:shadow-md transition text-center group">
-                <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-pride-pink-light dark:bg-pride-navy/30 flex items-center justify-center group-hover:bg-purple-200 dark:group-hover:bg-pride-navy/50 transition">
-                    <svg class="w-8 h-8 text-pride-navy dark:text-pride-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
-                    </svg>
-                </div>
-                <h3 class="text-lg font-bold text-pride-black dark:text-white mb-2">{{ __('Volunteer') }}</h3>
-                <p class="text-gray-600 dark:text-white/60 text-sm">{{ __('Volunteer desc') }}</p>
-                <a href="#" class="inline-block mt-6 text-sm font-semibold text-pride-navy dark:text-pride-pink hover:underline">{{ __('Volunteer Today →') }}</a>
-            </div>
-
-            <div class="bg-white dark:bg-pride-black rounded-2xl p-8 shadow-sm hover:shadow-md transition text-center group">
-                <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-pride-pink-light dark:bg-pride-pink/30 flex items-center justify-center group-hover:bg-pink-200 dark:group-hover:bg-pride-pink/50 transition">
-                    <svg class="w-8 h-8 text-pride-pink dark:text-pride-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                </div>
-                <h3 class="text-lg font-bold text-pride-black dark:text-white mb-2">{{ __('Donate') }}</h3>
-                <p class="text-gray-600 dark:text-white/60 text-sm">{{ __('Donate desc') }}</p>
-                <a href="#" class="inline-block mt-6 text-sm font-semibold text-pride-pink dark:text-pride-pink hover:underline">{{ __('Donate Now →') }}</a>
-            </div>
-
-            <div class="bg-white dark:bg-pride-black rounded-2xl p-8 shadow-sm hover:shadow-md transition text-center group">
-                <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-pride-pink-light dark:bg-pride-blue/30 flex items-center justify-center group-hover:bg-blue-200 dark:group-hover:bg-pride-blue/50 transition">
-                    <svg class="w-8 h-8 text-pride-blue dark:text-pride-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"/>
-                    </svg>
-                </div>
-                <h3 class="text-lg font-bold text-pride-black dark:text-white mb-2">{{ __('Sponsor') }}</h3>
-                <p class="text-gray-600 dark:text-white/60 text-sm">{{ __('Sponsor desc') }}</p>
-                <a href="#" class="inline-block mt-6 text-sm font-semibold text-pride-blue dark:text-pride-blue hover:underline">{{ __('Become a Sponsor →') }}</a>
-            </div>
         </div>
     </div>
 </section>

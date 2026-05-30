@@ -24,11 +24,6 @@
 <section id="manifest" class="py-20">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center gap-3 mb-6">
-            <span class="w-3 h-3 rounded-full bg-red-500"></span>
-            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
-            <span class="w-3 h-3 rounded-full bg-green-500"></span>
-            <span class="w-3 h-3 rounded-full bg-blue-500"></span>
-            <span class="w-3 h-3 rounded-full bg-purple-600"></span>
             <h2 class="text-3xl font-bold text-pride-black dark:text-white ml-2">{{ __('Manifest') }}</h2>
         </div>
         <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-6">
@@ -46,11 +41,6 @@
 <section id="march" class="py-20 bg-pride-gray dark:bg-pride-black">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center gap-3 mb-6">
-            <span class="w-3 h-3 rounded-full bg-red-500"></span>
-            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
-            <span class="w-3 h-3 rounded-full bg-green-500"></span>
-            <span class="w-3 h-3 rounded-full bg-blue-500"></span>
-            <span class="w-3 h-3 rounded-full bg-purple-600"></span>
             <h2 class="text-3xl font-bold text-pride-black dark:text-white ml-2">{{ __('March') }}</h2>
         </div>
         <p class="text-xl text-pride-pink dark:text-pride-pink font-semibold mb-4">{{ __('Saturday, July 5, 2026') }}</p>
