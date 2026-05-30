@@ -1,8 +1,88 @@
 .theme-corporate {
     --color-pride-navy: #21368b;
     --color-pride-blue: #2453ff;
-    --color-pride-pink: #0b53a0;
-    --color-pride-pink-light: #fd8ac1;
-    --color-pride-gray: #e6e8ff;
+    --color-pride-pink: #ff2f92;
+    --color-pride-pink-light: #ffe0ef;
+    --color-pride-gray: #f8f3ea;
     --color-pride-black: #101522;
+}
+
+.btn-pri, .btn-sec, .btn-black {
+    font-family: var(--font-head);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.font-head {
+    font-family: 'Anton', 'Bebas Neue', sans-serif;
+    font-weight: 800;
+    transform: scale(0.75, 1.15);
+}
+
+.btn-pri {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all .2s;
+    background-color: #FF2F92;
+    color: #fff;
+}
+.btn-pri:hover {
+    background-color: #080A12;
+}
+
+.btn-sec {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all .2s;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.btn-sec:hover {
+    background-color: #FF2F92;
+    border-color: #FF2F92;
+}
+
+.btn-black {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all .2s;
+    background-color: #080A12;
+    color: #fff;
+}
+.btn-black:hover {
+    background-color: #FF2F92;
+}
+
+.halftone {
+    background-image: radial-gradient(circle, rgba(255,255,255,.12) 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+.clip-btm {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+    position: relative;
+    z-index: 1;
+}
+
+.clip-top {
+    clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
+    margin-top: -3vw;
+    position: relative;
+    z-index: 2;
 }
