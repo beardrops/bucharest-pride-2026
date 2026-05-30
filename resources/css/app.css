@@ -7,13 +7,17 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-    --color-pride-navy: #18286b;
-    --color-pride-blue: #2453ff;
-    --color-pride-pink: #fb53a0;
-    --color-pride-pink-light: #fdbac1;
-    --color-pride-gray: #e8ebf1;
-    --color-pride-black: #171923;
+    --font-head: 'Oswald', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --color-pride-pink: #D62B65;
+    --color-pride-black: #080A12;
+    --color-pride-beige: #F8F3EA;
+    --color-pride-yellow: #FFD400;
+    --color-pride-navy: #080A12;
+    --color-pride-blue: #FF2F92;
+    --color-pride-pink-light: #ffe0ef;
+    --color-pride-gray: #F8F3EA;
 }
