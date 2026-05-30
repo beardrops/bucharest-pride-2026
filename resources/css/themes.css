@@ -14,9 +14,8 @@
 }
 
 .font-head {
-    font-family: 'Anton', 'Bebas Neue', sans-serif;
-    font-weight: 800;
-    transform: scale(0.75, 1.15);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
 }
 
 .btn-pri {
@@ -28,8 +27,9 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: all .2s;
-    background-color: #FF2F92;
+    background-color: var(--color-pride-pink);
     color: #fff;
+    border-radius: 5px;
 }
 .btn-pri:hover {
     background-color: #080A12;
@@ -47,10 +47,11 @@
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
+    border-radius: 5px;
 }
 .btn-sec:hover {
-    background-color: #FF2F92;
-    border-color: #FF2F92;
+    background-color: var(--color-pride-pink);
+    border-color: var(--color-pride-pink);
 }
 
 .btn-black {
@@ -64,9 +65,10 @@
     transition: all .2s;
     background-color: #080A12;
     color: #fff;
+    border-radius: 5px;
 }
 .btn-black:hover {
-    background-color: #FF2F92;
+    background-color: var(--color-pride-pink);
 }
 
 .halftone {

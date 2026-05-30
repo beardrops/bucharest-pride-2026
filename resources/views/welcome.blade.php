@@ -22,13 +22,13 @@
         <div class="max-w-3xl">
             <h1 class="font-head font-bold text-white text-7xl sm:text-8xl lg:text-[8rem] leading-[0.85] -tracking-[0.02em] mb-2">
                 BUCHAREST<br>
-                <span class="text-pride-pink">PRIDE</span><br>
+                <span class="text-pride-pink lg:text-[9rem]">PRIDE</span><br>
                 2026
             </h1>
-            <p class="font-head font-semibold text-white/80 text-xl sm:text-2xl lg:text-3xl mt-6 mb-6 tracking-[0.08em]">
-                TOȚI. PENTRU TOȚI.
+            <p class="font-head font-semibold text-white text-xl sm:text-2xl lg:text-7xl mt-6 mb-6 tracking-[0.08em]">
+                {{ __('All of us')}}
             </p>
-            <p class="font-head font-semibold text-white text-sm lg:text-base mb-8 tracking-[0.15em]">3 — 13 IUNIE 2026</p>
+            <p class="font-head font-semibold text-white text-sm lg:text-3xl mb-8 tracking-[0.15em]">3 — 13 IUNIE 2026</p>
             <div class="flex flex-col sm:flex-row gap-4">
                 <a href="#support" class="btn-pri">{{ __('See the Program') }}</a>
                 <a href="#support" class="btn-sec">{{ __('Donate') }}</a>
@@ -41,8 +41,8 @@
 <section id="support" class="py-24 sm:py-28 bg-pride-pink relative clip-btm">
     <div class="max-w-[1180px] mx-auto px-6 lg:px-8 relative z-10">
         <div class="text-center mb-16">
-            <h2 class="font-head font-bold text-white text-4xl sm:text-5xl lg:text-6xl uppercase">SUSȚINE BUCHAREST PRIDE</h2>
-            <p class="text-white/80 text-base sm:text-lg mt-4 max-w-2xl mx-auto leading-relaxed whitespace-pre-line">Pride nu este doar o paradă.<br>Este vizibilitate. Este rezistență.<br>Este dreptul nostru de a fi noi înșine, în siguranță.</p>
+            <h2 class="font-head font-bold text-pride-black text-4xl sm:text-5xl lg:text-6xl uppercase">SUSȚINE BUCHAREST PRIDE</h2>
+            <p class="text-pride-black text-base sm:text-lg mt-4 max-w-2xl mx-auto leading-relaxed whitespace-pre-line">Pride nu este doar o paradă.<br>Este vizibilitate. Este rezistență.<br>Este dreptul nostru de a fi noi înșine, în siguranță.</p>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-pride-beige border-2 border-pride-black p-8 text-center group">
