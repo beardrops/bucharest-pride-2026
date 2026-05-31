@@ -4,9 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Bucharest Pride') }}</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="/build/assets/app-Dt9BxW6U.css">
+    <script type="module" src="/build/assets/app-DZ_emaEe.js"></script>
 </head>
 <body class="font-body antialiased bg-white text-pride-black">
 
@@ -15,7 +19,7 @@
 {{-- HERO --}}
 <section class="relative min-h-[90vh] flex items-center overflow-hidden">
     <div class="absolute inset-0">
-        <img src="/images/hero_image.jpg" alt="" class="w-full h-full object-cover">
+        <img src="/images/hero_image.jpeg" alt="" class="w-full h-full object-cover">
     </div>
     <div class="absolute inset-0 bg-gradient-to-r from-pride-black/70 via-pride-black/30 to-transparent"></div>
     <div class="relative z-10 w-full max-w-[1180px] mx-auto px-6 lg:px-8 py-24">
@@ -38,54 +42,50 @@
 </section>
 
 {{-- SUPPORT / GET INVOLVED --}}
-<section id="support" class="py-24 sm:py-28 bg-pride-pink relative clip-btm">
+<section id="support" class="py-24 sm:py-28 bg-pride-pink relative clip-btm clip-top">
     <div class="max-w-[1180px] mx-auto px-6 lg:px-8 relative z-10">
         <div class="grid lg:grid-cols-5 gap-10 items-start">
             <div class="lg:col-span-2 lg:sticky lg:top-32">
                 <h2 class="font-head font-bold text-pride-black text-4xl sm:text-5xl lg:text-6xl uppercase leading-[0.9]">SUSȚINE<br>BUCHAREST<br>PRIDE</h2>
-                <p class="text-pride-black/80 text-base sm:text-lg mt-6 leading-relaxed">Pride nu este doar o paradă. Este vizibilitate. Este rezistență. Este dreptul nostru de a fi noi înșine, în siguranță.</p>
             </div>
             <div class="lg:col-span-3 grid md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-5">
-                <div class="bg-pride-pink p-8 text-center support-card relative overflow-hidden group flex flex-col rounded-sm">
-                    <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-white/20">
-                        <svg class="w-8 h-8 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
-                        </svg>
+                <a href="#" class="block">
+                    <div class="bg-white p-8 text-center support-card relative overflow-hidden group flex flex-col rounded-sm hover:shadow-[4px_4px_8px_rgba(0,0,0,0.2)]">
+                        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-pride-pink/20">
+                            <svg class="w-8 h-8 text-pride-pink relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Volunteer') }}</h3>
+                        <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Volunteer desc') }}</p>
+                        <p class="mt-auto self-center text-sm text-pride-black">Learn more →</p>
                     </div>
-                    <h3 class="font-head font-semibold text-xl text-white mb-3 uppercase relative z-10">{{ __('Volunteer') }}</h3>
-                    <p class="text-white/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Volunteer desc') }}</p>
-                    <a href="#" class="btn-sec text-white border-white hover:bg-white hover:text-pride-pink hover:border-white mt-auto self-center text-sm !py-2 !px-5">{{ __('Volunteer') }}</a>
-                </div>
-                <div class="bg-pride-pink p-8 text-center support-card relative overflow-hidden group flex flex-col rounded-sm">
-                    <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-white/20">
-                        <svg class="w-8 h-8 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                </a>
+                <a href="#" class="block">
+                    <div class="bg-white p-8 text-center support-card relative overflow-hidden group flex flex-col rounded-sm hover:shadow-[4px_4px_8px_rgba(0,0,0,0.2)]">
+                        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-pride-pink/20">
+                            <svg class="w-8 h-8 text-pride-pink relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Donate') }}</h3>
+                        <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Donate desc') }}</p>
+                        <p class="mt-auto self-center text-sm text-pride-black">Learn more →</p>
                     </div>
-                    <h3 class="font-head font-semibold text-xl text-white mb-3 uppercase relative z-10">{{ __('Donate') }}</h3>
-                    <p class="text-white/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Donate desc') }}</p>
-                    <a href="#" class="btn-sec text-white border-white hover:bg-white hover:text-pride-pink hover:border-white mt-auto self-center text-sm !py-2 !px-5">{{ __('Donate') }}</a>
-                </div>
-                <div class="bg-pride-pink p-8 text-center support-card relative overflow-hidden group flex flex-col rounded-sm">
-                    <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-white/20">
-                        <svg class="w-8 h-8 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"/>
-                        </svg>
+                </a>
+                <a href="#" class="block">
+                    <div class="bg-white p-8 text-center support-card relative overflow-hidden group flex flex-col rounded-sm hover:shadow-[4px_4px_8px_rgba(0,0,0,0.2)]">
+                        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-pride-pink/20">
+                            <svg class="w-8 h-8 text-pride-pink relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 001.06.44l1.19 1.189a3 3 0 00-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75-.75v3.75c0 .415.336.75.75.75z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Sponsor') }}</h3>
+                        <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Sponsor desc') }}</p>
+                        <p class="mt-auto self-center text-sm text-pride-black">Learn more →</p>
                     </div>
-                    <h3 class="font-head font-semibold text-xl text-white mb-3 uppercase relative z-10">{{ __('Sponsor') }}</h3>
-                    <p class="text-white/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Sponsor desc') }}</p>
-                    <a href="#" class="btn-sec text-white border-white hover:bg-white hover:text-pride-pink hover:border-white mt-auto self-center text-sm !py-2 !px-5">{{ __('Become a Sponsor') }}</a>
-                </div>
+                </a>
             </div>
-        </div>
-    </div>
-</section>
-
-{{-- VIDEO --}}
-<section class="py-20 sm:py-24 bg-pride-beige">
-    <div class="max-w-[1180px] mx-auto px-6 lg:px-8">
-        <div class="aspect-video max-w-4xl mx-auto shadow-lg">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/hnm14A9NLkQ?si=92-JHqe1Vu1WrdpM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 </section>

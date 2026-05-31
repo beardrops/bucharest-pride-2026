@@ -7,12 +7,8 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-
 @theme {
-    --font-head: 'Oswald', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    --color-pride-pink: #D62B65;
+    --color-pride-pink: #E8345A;
     --color-pride-black: #080A12;
     --color-pride-beige: #F8F3EA;
     --color-pride-yellow: #FFD400;
@@ -20,4 +16,11 @@
     --color-pride-blue: #FF2F92;
     --color-pride-pink-light: #ffe0ef;
     --color-pride-gray: #F8F3EA;
+}
+
+/* Font families are loaded via HTML <link> tags in the layout */
+/* We'll use CSS variables to reference them */
+:root {
+    --font-head: 'Big Shoulders', sans-serif;
+    --font-body: 'Inter', sans-serif;
 }
