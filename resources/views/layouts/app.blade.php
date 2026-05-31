@@ -11,8 +11,7 @@
         
         <title>{{ config('app.name', 'Bucharest Pride') }} @isset($title) — {{ $title }} @endisset</title>
         
-        <link rel="stylesheet" href="/build/assets/app-Dt9BxW6U.css">
-        <script type="module" src="/build/assets/app-DZ_emaEe.js"></script>
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased bg-pride-gray text-pride-black dark:bg-pride-black dark:text-white">
         <div class="min-h-screen">
