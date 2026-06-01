@@ -3,14 +3,14 @@
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PublicEventController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
-Route::get('/', function () {
-    $locale = session('locale', config('app.locale'));
-    if (in_array($locale, ['en', 'ro'])) {
-        app()->setLocale($locale);
-    }
-    return view('welcome');
-})->name('home');
+// Authentication Routes
+Route::middleware('guest')->group(function () {
+    Route::get('admin/login', [AuthenticatedSessionController::class, 'create'])
+        ->name('admin.login');
+    Route::post('admin/login', [AuthenticatedSessionController::class, 'store']);
+});
 
 Route::get('/locale/{locale}', function (string $locale) {
     if (!in_array($locale, ['en', 'ro'])) {
@@ -20,6 +20,8 @@ Route::get('/locale/{locale}', function (string $locale) {
     app()->setLocale($locale);
     return view('welcome');
 })->name('locale.switch');
+
+// Existing routes follow below...
 
 Route::get('/about', function () {
     $locale = session('locale', config('app.locale'));
@@ -55,6 +57,9 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('admin/events', EventController::class)
         ->names('admin.events');
+
+    Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
+        ->name('logout');
 });
 
 Route::get('/theme/{theme}', function (string $theme) {

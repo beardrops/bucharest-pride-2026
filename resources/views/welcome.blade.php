@@ -24,7 +24,7 @@
     <div class="relative z-10 w-full max-w-[1180px] mx-auto px-6 lg:px-8 py-24">
         <div class="max-w-3xl">
             <h1 class="font-head font-bold text-white text-7xl sm:text-8xl lg:text-[8rem] leading-[0.85] -tracking-[0.02em] mb-2">
-                BUCHAREST<br>
+                        {{ __('BUCHAREST') }}<br>
                 <span class="text-pride-pink lg:text-[9rem]">PRIDE</span><br>
                 2026
             </h1>
@@ -33,8 +33,8 @@
             </p>
             <p class="font-head font-semibold text-white text-sm lg:text-3xl mb-8 tracking-[0.15em]">3 — 13 IUNIE 2026</p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#support" class="btn-pri">{{ __('See the Program') }}</a>
-                <a href="#support" class="btn-sec">{{ __('Donate') }}</a>
+                <a href="#support" class="btn-pri">{{ __('Program') }}</a>
+                <a href="#support" class="btn-sec">{{ __('Donează') }}</a>
             </div>
         </div>
     </div>
@@ -45,9 +45,9 @@
     <div class="max-w-[1180px] mx-auto px-6 lg:px-8 relative z-10">
         <div class="grid lg:grid-cols-5 gap-10 items-start">
             <div class="lg:col-span-2 lg:sticky lg:top-32">
-                <h2 class="font-head font-bold text-pride-black text-4xl sm:text-5xl lg:text-6xl uppercase leading-[0.9]">SUSȚINE<br>BUCHAREST<br>PRIDE</h2>
+                <h2 class="font-head font-bold text-pride-black text-4xl sm:text-5xl lg:text-6xl uppercase leading-[0.9]">{{ __('SUSȚINE') }}<br>BUCHAREST<br>PRIDE</h2>
             </div>
-            <div class="lg:col-span-3 grid md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-5">
+            <div class="lg:col-span-3 grid md:grid-cols-3 gap-5 items-stretch">
                 <a href="#" class="block">
                     <div class="bg-white p-8 text-center support-card relative overflow-hidden group flex flex-col rounded-sm hover:shadow-[4px_4px_8px_rgba(0,0,0,0.2)]">
                         <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-pride-pink/20">
@@ -55,9 +55,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
                             </svg>
                         </div>
-                        <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Volunteer') }}</h3>
-                        <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Volunteer desc') }}</p>
-                        <p class="mt-auto self-center text-sm text-pride-black">Learn more →</p>
+                        <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Voluntari') }}</h3>
+                        <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Descriere Voluntari') }}</p>
+                        <p class="mt-auto self-center text-sm text-pride-black">{{ __('IMPLICĂ-TE') }}</p>
                     </div>
                 </a>
                 <a href="#" class="block">
@@ -67,9 +67,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                         </div>
-                        <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Donate') }}</h3>
-                        <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Donate desc') }}</p>
-                        <p class="mt-auto self-center text-sm text-pride-black">Learn more →</p>
+                        <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Donatori') }}</h3>
+                        <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Descriere Donatori') }}</p>
+                                <p class="mt-auto self-center text-sm text-pride-black">{{ __('DONEAZĂ') }}</p>
                     </div>
                 </a>
                 <a href="#" class="block">
@@ -79,9 +79,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 001.06.44l1.19 1.189a3 3 0 00-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75-.75v3.75c0 .415.336.75.75.75z"/>
                             </svg>
                         </div>
-                        <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Sponsor') }}</h3>
-                        <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Sponsor desc') }}</p>
-                        <p class="mt-auto self-center text-sm text-pride-black">Learn more →</p>
+                        <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Parteneri') }}</h3>
+                        <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Descriere Parteneri') }}</p>
+                        <p class="mt-auto self-center text-sm text-pride-black">{{ __('SUSȚINE')}}</p>
                     </div>
                 </a>
             </div>
@@ -95,30 +95,27 @@
         <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div>
                 <h2 class="font-head font-bold text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.9] -tracking-[0.02em]">
-                    EDUCATE.<br>
-                    COMMEMORATE.<br>
-                    CELEBRATE.<br>
-                    <span class="text-pride-pink">LIBERATE.</span>
+                            {{ __('Bucharest Pride') }}<br>
+                    <span class="text-pride-pink">{{ __('by ACCEPT') }}</span>
                 </h2>
-                <p class="text-white/60 text-base sm:text-lg mt-8 max-w-lg leading-relaxed">{{ __('About description') }}</p>
-                <p class="text-white/60 text-base sm:text-lg mt-4 max-w-lg leading-relaxed">{{ __('About description 2') }}</p>
+                <p class="text-white/60 text-base sm:text-lg mt-8 max-w-lg leading-relaxed">{{ __('Descriere Despre') }}</p>
             </div>
             <div class="grid grid-cols-2 gap-6">
                 <div class="border border-white/20 p-8 text-center">
-                    <div class="font-head font-bold text-5xl text-pride-pink">50K+</div>
-                    <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('Annual Attendees') }}</p>
+                    <div class="font-head font-bold text-5xl text-pride-pink">+20</div>
+                    <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('ANI DE ISTORIE') }}</p>
                 </div>
                 <div class="border border-white/20 p-8 text-center">
-                    <div class="font-head font-bold text-5xl text-white">20+</div>
-                    <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('Years of Pride') }}</p>
+                    <div class="font-head font-bold text-5xl text-white">500+</div>
+                    <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('EVENIMENTE') }}</p>
                 </div>
                 <div class="border border-white/20 p-8 text-center">
-                    <div class="font-head font-bold text-5xl text-pride-pink">100+</div>
-                    <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('Events & Activities') }}</p>
+                    <div class="font-head font-bold text-5xl text-white">300+</div>
+                    <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('PARTENERI') }}</p>
                 </div>
                 <div class="border border-white/20 p-8 text-center">
-                    <div class="font-head font-bold text-5xl text-white">#1</div>
-                    <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('Largest in Romania') }}</p>
+                    <div class="font-head font-bold text-5xl text-pride-pink">35 000+</div>
+                    <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('PARTICIPANȚI') }}</p>
                 </div>
             </div>
         </div>
@@ -132,20 +129,28 @@
         <p class="font-head font-semibold text-pride-pink text-sm mb-3 tracking-[0.15em]">{{ __("It's getting closer!") }}</p>
         <h2 class="font-head font-bold text-pride-black text-4xl sm:text-5xl mb-12">BUCHAREST PRIDE 2026</h2>
         <div class="grid grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto">
-            <div class="border-2 border-pride-pink p-5 sm:p-6">
-                <div class="font-head font-bold text-5xl sm:text-6xl tabular-nums text-pride-black" x-text="days">00</div>
+            <div class="border-2 border-pride-pink p-5 sm:p-6 text-center w-[6.5rem]">
+                <div class="font-head font-bold text-5xl sm:text-6xl text-pride-black tracking-tight"
+                     style="font-variant-numeric: tabular-nums;"
+                     x-text="days.padStart(2, '0')">00</div>
                 <p class="font-head font-medium text-xs text-gray-500 mt-1 tracking-[0.12em] uppercase">{{ __('Days') }}</p>
             </div>
-            <div class="border-2 border-pride-pink p-5 sm:p-6">
-                <div class="font-head font-bold text-5xl sm:text-6xl tabular-nums text-pride-black" x-text="hours">00</div>
+            <div class="border-2 border-pride-pink p-5 sm:p-6 text-center w-[6.5rem]">
+                <div class="font-head font-bold text-5xl sm:text-6xl text-pride-black tracking-tight"
+                     style="font-variant-numeric: tabular-nums;"
+                     x-text="hours.padStart(2, '0')">00</div>
                 <p class="font-head font-medium text-xs text-gray-500 mt-1 tracking-[0.12em] uppercase">{{ __('Hours') }}</p>
             </div>
-            <div class="border-2 border-pride-pink p-5 sm:p-6">
-                <div class="font-head font-bold text-5xl sm:text-6xl tabular-nums text-pride-black" x-text="minutes">00</div>
+            <div class="border-2 border-pride-pink p-5 sm:p-6 text-center w-[6.5rem]">
+                <div class="font-head font-bold text-5xl sm:text-6xl text-pride-black tracking-tight"
+                     style="font-variant-numeric: tabular-nums;"
+                     x-text="minutes.padStart(2, '0')">00</div>
                 <p class="font-head font-medium text-xs text-gray-500 mt-1 tracking-[0.12em] uppercase">{{ __('Minutes') }}</p>
             </div>
-            <div class="border-2 border-pride-pink p-5 sm:p-6">
-                <div class="font-head font-bold text-5xl sm:text-6xl tabular-nums text-pride-black" x-text="seconds">00</div>
+            <div class="border-2 border-pride-pink p-5 sm:p-6 text-center w-[6.5rem]">
+                <div class="font-head font-bold text-5xl sm:text-6xl text-pride-black tracking-tight"
+                     style="font-variant-numeric: tabular-nums;"
+                     x-text="seconds.padStart(2, '0')">00</div>
                 <p class="font-head font-medium text-xs text-gray-500 mt-1 tracking-[0.12em] uppercase">{{ __('Seconds') }}</p>
             </div>
         </div>
@@ -157,13 +162,17 @@
         return {
             days: '00', hours: '00', minutes: '00', seconds: '00',
             init() {
-                const target = new Date(targetDate).getTime();
-                const now = new Date().getTime();
-                const diff = Math.max(0, target - now);
-                this.days = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
-                this.hours = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-                this.minutes = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-                this.seconds = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+                const update = () => {
+                    const target = new Date(targetDate).getTime();
+                    const now = new Date().getTime();
+                    const diff = Math.max(0, target - now);
+                    this.days = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+                    this.hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+                    this.minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                    this.seconds = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+                }
+                update();
+                setInterval(update, 1000);
             }
         }
     }
@@ -174,12 +183,14 @@
     <div class="absolute inset-0 halftone"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-pride-pink/0 via-pride-pink/0 to-pride-black/20"></div>
     <div class="max-w-[1180px] mx-auto px-6 lg:px-8 text-center relative z-10">
-        <p class="font-head font-semibold text-white/70 text-sm mb-3 tracking-[0.15em]">{{ __('Pride Parade') }}</p>
-        <h2 class="font-head font-bold text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.9] mb-6">{{ __('March with Us') }}</h2>
-        <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-2 font-light">{{ __('Saturday, July 5, 2026') }}</p>
-        <p class="text-white/70 max-w-xl mx-auto mb-10 leading-relaxed">{{ __('Parade description') }}</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="{{ route('events.index') }}" class="btn-black">{{ __('Parade Info & Route') }}</a>
+        <h2 class="font-head font-bold text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.9] mb-6">{{ __('Marșul Bucharest Pride') }}</h2>
+        <p class="text-white/70 max-w-xl mx-auto mb-10 leading-relaxed">{{ __('Descriere Marș') }}</p>
+        <p class="text-white/70 max-w-xl mx-auto leading-relaxed">16:00 - {{ __('Adunare la Piața Victorie') }}</p>
+        <p class="text-white/70 max-w-xl mx-auto leading-relaxed">17:00 - {{ __('Pornire Bucharest PRIDE') }}</p>
+        <p class="text-white/70 max-w-xl mx-auto leading-relaxed">19:00 - {{ __('Sosire la Pride Park | Izvor') }}</p>
+        <p class="text-white/70 max-w-xl mx-auto leading-relaxed">19:30 - {{ __('Revendicări & Pride Party') }}</p>
+        <div class="mt-8 mx-auto max-w-4xl">
+            <img src="/images/traseu_mars.png" alt="Traseul Marșului Bucharest Pride" class="w-full h-auto rounded-lg shadow-lg">
         </div>
     </div>
 </section>
