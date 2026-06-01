@@ -5,6 +5,14 @@ use App\Http\Controllers\PublicEventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
+Route::get('/', function () {
+    $locale = session('locale', config('app.locale'));
+    if (in_array($locale, ['en', 'ro'])) {
+        app()->setLocale($locale);
+    }
+    return view('welcome');
+})->name('home');
+
 // Authentication Routes
 Route::middleware('guest')->group(function () {
     Route::get('admin/login', [AuthenticatedSessionController::class, 'create'])
@@ -25,13 +33,17 @@ Route::get('/locale/{locale}', function (string $locale) {
 
 Route::get('/about', function () {
     $locale = session('locale', config('app.locale'));
-    if (in_array($locale, ['en', 'ro'])) { app()->setLocale($locale); }
+    if (in_array($locale, ['en', 'ro'])) {
+        app()->setLocale($locale);
+    }
     return view('pages.about');
 })->name('about');
 
 Route::get('/bucharest-pride-2026', function () {
     $locale = session('locale', config('app.locale'));
-    if (in_array($locale, ['en', 'ro'])) { app()->setLocale($locale); }
+    if (in_array($locale, ['en', 'ro'])) {
+        app()->setLocale($locale);
+    }
     return view('pages.pride-2026');
 })->name('pride-2026');
 
@@ -40,13 +52,17 @@ Route::get('/events/{event:slug}', [PublicEventController::class, 'show'])->name
 
 Route::get('/get-involved', function () {
     $locale = session('locale', config('app.locale'));
-    if (in_array($locale, ['en', 'ro'])) { app()->setLocale($locale); }
+    if (in_array($locale, ['en', 'ro'])) {
+        app()->setLocale($locale);
+    }
     return view('pages.get-involved');
 })->name('get-involved');
 
 Route::get('/contact', function () {
     $locale = session('locale', config('app.locale'));
-    if (in_array($locale, ['en', 'ro'])) { app()->setLocale($locale); }
+    if (in_array($locale, ['en', 'ro'])) {
+        app()->setLocale($locale);
+    }
     return view('pages.contact');
 })->name('contact');
 

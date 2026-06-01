@@ -50,7 +50,7 @@
             <div class="lg:col-span-3 grid md:grid-cols-3 gap-5 items-stretch">
                 <a href="#" class="block">
                     <div class="bg-white p-8 text-center support-card relative overflow-hidden group flex flex-col rounded-sm hover:shadow-[4px_4px_8px_rgba(0,0,0,0.2)]">
-                        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-pride-pink/20">
+                        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full">
                             <svg class="w-8 h-8 text-pride-pink relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
                             </svg>
@@ -62,7 +62,7 @@
                 </a>
                 <a href="#" class="block">
                     <div class="bg-white p-8 text-center support-card relative overflow-hidden group flex flex-col rounded-sm hover:shadow-[4px_4px_8px_rgba(0,0,0,0.2)]">
-                        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-pride-pink/20">
+                        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full">
                             <svg class="w-8 h-8 text-pride-pink relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
@@ -74,7 +74,7 @@
                 </a>
                 <a href="#" class="block">
                     <div class="bg-white p-8 text-center support-card relative overflow-hidden group flex flex-col rounded-sm hover:shadow-[4px_4px_8px_rgba(0,0,0,0.2)]">
-                        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-pride-pink/20">
+                        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full">
                             <svg class="w-8 h-8 text-pride-pink relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 001.06.44l1.19 1.189a3 3 0 00-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75-.75v3.75c0 .415.336.75.75.75z"/>
                             </svg>
