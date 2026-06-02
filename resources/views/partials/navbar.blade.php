@@ -1,6 +1,6 @@
 <nav x-data="{ open: false, scrolled: false }"
      x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 50)"
-     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-pride-black/40 backdrop-blur-sm">
+     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-pride-black backdrop-blur-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-20">
             <a href="{{ route('home') }}" class="flex items-center gap-3 shrink-0">
@@ -14,7 +14,7 @@
                      @mouseleave="timer = setTimeout(() => open = false, 250)">
                     <a href="{{ route('about') }}"
                        class="flex items-center gap-1 text-sm font-medium transition whitespace-nowrap text-white hover:text-pride-pink">
-                        {{ __('About') }}
+                        {{ __('Despre') }}
                         <svg class="w-3 h-3" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
@@ -22,10 +22,10 @@
                     <div x-show="open" x-cloak
                          @mouseenter="clearTimeout(timer); open = true"
                          @mouseleave="timer = setTimeout(() => open = false, 250)"
-                         class="absolute left-0 mt-[30px] bg-pride-black/40 shadow-lg py-2 min-w-[200px] z-50">
+                         class="absolute left-0 mt-[30px] bg-pride-black shadow-lg py-2 min-w-[200px] z-50">
                         <a href="{{ route('about') }}#accept-organization" class="block px-4 py-2 text-sm text-gray-700 text-white hover:text-pride-pink">{{ __('Accept Organization') }}</a>
                         <a href="{{ route('about') }}#bucharest-pride" class="block px-4 py-2 text-sm text-gray-700 text-white hover:text-pride-pink">{{ __('BucharestPride') }}</a>
-                        <a href="{{ route('about') }}#the-team" class="block px-4 py-2 text-sm text-gray-700 text-white hover:text-pride-pink">{{ __('The Team') }}</a>
+                        <a href="{{ route('about') }}#the-team" class="block px-4 py-2 text-sm text-gray-700 text-white hover:text-pride-pink">{{ __('Echipa') }}</a>
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@
                     <div x-show="open" x-cloak
                          @mouseenter="clearTimeout(timer); open = true"
                          @mouseleave="timer = setTimeout(() => open = false, 250)"
-                         class="absolute left-0 mt-[30px] bg-pride-black/40 shadow-lg py-2 min-w-[200px] z-50">
+                         class="absolute left-0 mt-[30px] bg-pride-black shadow-lg py-2 min-w-[200px] z-50">
                         <a href="{{ route('pride-2026') }}#manifest" class="block px-4 py-2 text-sm text-gray-700 text-white hover:text-pride-pink">{{ __('Manifest') }}</a>
                         <a href="{{ route('pride-2026') }}#march" class="block px-4 py-2 text-sm text-gray-700 text-white hover:text-pride-pink">{{ __('Marș') }}</a>
 						<a href="{{ route('pride-2026') }}#guide" class="block px-4 py-2 text-sm text-gray-700 text-white hover:text-pride-pink">{{ __('Ghid') }}</a>
@@ -73,7 +73,7 @@
                     <div x-show="open" x-cloak
                          @mouseenter="clearTimeout(timer); open = true"
                          @mouseleave="timer = setTimeout(() => open = false, 250)"
-                         class="absolute left-0 mt-[30px] bg-pride-black/40 shadow-lg py-2 min-w-[200px] z-50">
+                         class="absolute left-0 mt-[30px] bg-pride-black shadow-lg py-2 min-w-[200px] z-50">
                         <a href="{{ route('get-involved') }}#volunteer" class="block px-4 py-2 text-sm text-gray-700 text-white hover:text-pride-pink">{{ __('Volunteer') }}</a>
                         <a href="{{ route('get-involved') }}#sponsors" class="block px-4 py-2 text-sm text-gray-700 text-white hover:text-pride-pink">{{ __('Sponsors') }}</a>
                         <a href="{{ route('get-involved') }}#donations" class="block px-4 py-2 text-sm text-gray-700 text-white hover:text-pride-pink">{{ __('Donations') }}</a>
@@ -107,7 +107,7 @@
                     <div x-show="open" x-cloak
                          @mouseenter="clearTimeout(timer); open = true"
                          @mouseleave="timer = setTimeout(() => open = false, 250)"
-                         class="absolute left-0 mt-[30px] bg-pride-black/40 shadow-lg py-2 min-w-[200px] z-50">
+                         class="absolute left-0 mt-[30px] bg-pride-black shadow-lg py-2 min-w-[200px] z-50">
                         <a href="{{ route('locale.switch', 'en') }}" class="block px-4 py-2 text-sm text-gray-700 text-white hover:text-pride-pink">{{ __('English') }}</a>
                         <a href="{{ route('locale.switch', 'ro') }}" class="block px-4 py-2 text-sm text-gray-700 text-white hover:text-pride-pink">{{ __('Română') }}</a>
                     </div>
@@ -125,7 +125,7 @@
         </div>
     </div>
 
-    <div x-show="open" x-cloak class="lg:hidden bg-pride-black/40">
+    <div x-show="open" x-cloak class="lg:hidden bg-pride-black">
         <div class="px-4 py-4 space-y-3">
             <div x-data="{ mobAbout: false }">
                 <button @click="mobAbout = !mobAbout" class="flex items-center justify-between w-full text-sm font-medium text-gray-700 text-white">

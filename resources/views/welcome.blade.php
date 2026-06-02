@@ -43,11 +43,11 @@
 {{-- SUPPORT / GET INVOLVED --}}
 <section id="support" class="py-24 sm:py-28 bg-pride-pink relative clip-btm clip-top">
     <div class="max-w-[1180px] mx-auto px-6 lg:px-8 relative z-10">
-        <div class="grid lg:grid-cols-5 gap-10 items-start">
+        <div class="grid lg:grid-cols-6 gap-10 items-start">
             <div class="lg:col-span-2 lg:sticky lg:top-32">
                 <h2 class="font-head font-bold text-pride-black text-4xl sm:text-5xl lg:text-6xl uppercase leading-[0.9]">{{ __('SUSȚINE') }}<br>BUCHAREST<br>PRIDE</h2>
             </div>
-            <div class="lg:col-span-3 grid md:grid-cols-3 gap-5 items-stretch">
+            <div class="lg:col-span-4 grid md:grid-cols-3 gap-5 items-stretch">
                 <a href="#" class="block">
                     <div class="bg-white p-8 text-center support-card relative overflow-hidden group flex flex-col rounded-sm hover:shadow-[4px_4px_8px_rgba(0,0,0,0.2)]">
                         <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full">
@@ -90,17 +90,18 @@
 </section>
 
 {{-- STATS / ABOUT --}}
-<section class="py-24 sm:py-28 bg-pride-black relative clip-top">
+<section class="py-24 sm:py-28 bg-pride-black relative">
     <div class="max-w-[1180px] mx-auto px-6 lg:px-8 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+        <div class="grid lg:grid-cols-6 gap-16 items-center">
+            <div class="lg:col-span-2 lg:sticky lg:top-32">
                 <h2 class="font-head font-bold text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.9] -tracking-[0.02em]">
                             {{ __('Bucharest Pride') }}<br>
                     <span class="text-pride-pink">{{ __('by ACCEPT') }}</span>
                 </h2>
                 <p class="text-white/60 text-base sm:text-lg mt-8 max-w-lg leading-relaxed">{{ __('Descriere Despre') }}</p>
             </div>
-            <div class="grid grid-cols-2 gap-6">
+            <div class="lg:col-span-4 grid md:grid-cols-3 gap-5 items-stretch lg:grid-cols-2">
+				
                 <div class="border border-white/20 p-8 text-center">
                     <div class="font-head font-bold text-5xl text-pride-pink">+20</div>
                     <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('ANI DE ISTORIE') }}</p>
@@ -123,7 +124,7 @@
 </section>
 
 {{-- COUNTDOWN --}}
-<section class="py-20 sm:py-24 bg-pride-beige relative clip-btm">
+<section class="py-20 sm:py-24 bg-pride-beige relative">
     <div x-data="countdown('2026-06-13T17:00:00')" x-init="init(); setInterval(() => init(), 1000)"
          class="max-w-[1180px] mx-auto px-6 lg:px-8 text-center relative z-10">
         <p class="font-head font-semibold text-pride-pink text-sm mb-3 tracking-[0.15em]">{{ __("It's getting closer!") }}</p>
@@ -179,7 +180,7 @@
 </script>
 
 {{-- PARADE --}}
-<section id="parade" class="py-24 sm:py-28 bg-pride-pink relative overflow-hidden clip-top">
+<section id="parade" class="py-24 sm:py-28 bg-pride-pink relative overflow-hidden">
     <div class="absolute inset-0 halftone"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-pride-pink/0 via-pride-pink/0 to-pride-black/20"></div>
     <div class="max-w-[1180px] mx-auto px-6 lg:px-8 text-center relative z-10">
@@ -196,7 +197,7 @@
 </section>
 
 {{-- EVENTS --}}
-<section id="events" class="py-24 sm:py-28 bg-pride-beige relative clip-btm">
+<section id="events" class="py-24 sm:py-28 bg-pride-beige relative">
     <div class="max-w-[1180px] mx-auto px-6 lg:px-8 relative z-10">
         <div class="text-center mb-16">
             <p class="font-head font-semibold text-pride-pink text-sm mb-3 tracking-[0.15em]">{{ __('Program') }}</p>

@@ -84,7 +84,7 @@
 
 .clip-top {
     clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
-    margin-top: -3.2vw;
+    margin-top: -3.3vw;
     position: relative;
     z-index: 2;
 }
