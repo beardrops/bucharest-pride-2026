@@ -25,12 +25,12 @@
 
 <section id="accept-organization" class="py-20">
 	<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 items-center text-center">
-		<div class="flex justify-center mb-8">
+		<div class="flex justify-left mb-8">
 			<img src="/images/logo_accept_color.png" 
 				 class="w-1/2 h-auto max-w-[300px]  brightness-0" 
 				 alt="Accept Logo">
 		</div>
-		<h1 class="text-4xl font-bold text-pride-black text-center mb-8">
+		<h1 class="text-4xl font-bold text-pride-black text-left mb-8">
 			{{ __('Suntem ACCEPT') }}
 		</h1>
         <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
@@ -56,12 +56,12 @@
 
 <section id="bucharest-pride" class="py-20 bg-pride-pink dark:bg-pride-black text-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 items-center text-center">
-		<div class="flex justify-center mb-8">
+		<div class="flex justify-left mb-8">
 			<img src="/images/logo_bucharest_pride.png" 
 				 class="w-1/2 h-auto max-w-[300px] brightness-0 invert" 
 				 alt="Accept Logo">
 		</div>
-		<h1 class="text-4xl font-bold text-center mb-8">
+		<h1 class="text-4xl font-bold text-left mb-8">
 			{{ __('Organizăm Bucharest PRIDE') }}
 		</h1>
         <p class="text-lg leading-relaxed mb-4">
@@ -81,7 +81,7 @@
 
 <section id="the-team" class="py-20">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 items-center text-center">
-		<h1 class="text-4xl font-bold text-pride-black text-center mb-8">
+		<h1 class="text-4xl font-bold text-pride-black text-left mb-8">
 			{{ __('Echipa Bucharest PRIDE') }}
 		</h1>
         <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">

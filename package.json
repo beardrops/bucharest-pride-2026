@@ -20,6 +20,7 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^7.2.0",
         "flatpickr": "^4.6.13",
-        "material-icons": "^1.13.14"
+        "material-icons": "^1.13.14",
+        "material-symbols": "^0.44.11"
     }
 }

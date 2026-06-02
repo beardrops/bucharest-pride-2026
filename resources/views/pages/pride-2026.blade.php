@@ -40,28 +40,24 @@
     </div>
 </section>
 
-<section id="march" class="py-20 bg-pride-pink dark:bg-pride-black text-pride-black dark:text-white">
+<section id="march" class="py-20 bg-pride-pink dark:bg-pride-black text-white dark:text-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center gap-3 mb-6">
-            <h2 class="text-3xl font-bold text-white dark:text-pride-pink ml-2">{{ __('Marșul Bucharest Pride') }}</h2>
+            <h2 class="text-3xl font-bold dark:text-pride-pink ml-2">{{ __('Marșul Bucharest PRIDE') }}</h2>
         </div>
-        <p class="text-xl text-gray-600 text-white dark:text-pride-pink font-semibold mb-4">{{ __('ALL OF US înseamnă să mergem împreună. Pentru comunitatea noastră, pentru cei care au deschis drumul înaintea noastră și pentru cei care încă își revendică locul. Pe 13 iunie, ne vedem la marș.') }}</p>
-        <p class="text-lg text-gray-600 text-white dark:text-pride-pink leading-relaxed mb-6">
-            {{ __('Parade description') }}
-        </p>
-        <div class="bg-white dark:bg-pride-black rounded-2xl p-8 shadow-sm">
-            <h3 class="text-lg font-bold mb-4">{{ __('Parade Route') }}</h3>
-            <div class="grid sm:grid-cols-2 gap-1 text-sm">
-				<p>16:00:</p>
-				<p>{{ __('Adunare la Piața Victoriei') }}</p>
-				<p>17:00:</p>
-				<p>{{ __('Pornire Bucharest PRIDE') }}</p>
-				<p>19:00:</p>
-				<p>{{ __('Sosire la Pride Park | Izvor') }}</p>
-				<p>19:30:</p>
-				<p>{{ __('Revendicări & Pride Party') }}</p>
-			</div>
-        </div>
+        <p class="text-xl dark:text-pride-pink font-semibold mb-4">{{ __('ALL OF US înseamnă să mergem împreună. Pentru comunitatea noastră, pentru cei care au deschis drumul înaintea noastră și pentru cei care încă își revendică locul. Pe 13 iunie, ne vedem la marș.') }}</p>
+		<h3 class="text-lg font-bold mb-4">{{ __('Parade Route') }}</h3>
+		<div class="grid sm:grid-cols-2 gap-1 text-sm">
+			<p>16:00:</p>
+			<p>{{ __('Adunare la Piața Victoriei') }}</p>
+			<p>17:00:</p>
+			<p>{{ __('Pornire Bucharest PRIDE') }}</p>
+			<p>19:00:</p>
+			<p>{{ __('Sosire la Pride Park | Izvor') }}</p>
+			<p>19:30:</p>
+			<p>{{ __('Revendicări & Pride Party') }}</p>
+		</div>
+
     </div>
 </section>
 

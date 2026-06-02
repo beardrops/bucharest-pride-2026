@@ -84,7 +84,7 @@
 
 .clip-top {
     clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
-    margin-top: -3.3vw;
+    margin-top: -4vw;
     position: relative;
     z-index: 2;
 }
@@ -124,4 +124,12 @@
 
 .support-card svg {
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.bp-about {
+	padding-bottom: 75px !important;
+}
+
+.about-card-icon {
+	font-size: 50px !important;
 }

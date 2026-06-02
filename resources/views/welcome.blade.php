@@ -41,7 +41,7 @@
 </section>
 
 {{-- SUPPORT / GET INVOLVED --}}
-<section id="support" class="py-24 sm:py-28 bg-pride-pink relative clip-btm clip-top">
+<section id="support" class="sm:py-28 bg-pride-pink relative clip-top bp-about">
     <div class="max-w-[1180px] mx-auto px-6 lg:px-8 relative z-10">
         <div class="grid lg:grid-cols-6 gap-10 items-start">
             <div class="lg:col-span-2 lg:sticky lg:top-32">
@@ -51,9 +51,9 @@
                 <a href="#" class="block">
                     <div class="bg-white p-8 text-center support-card relative overflow-hidden group flex flex-col hover:-translate-y-1 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-transform duration-800 ease-in-out">
                         <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full">
-                            <svg class="w-8 h-8 text-pride-pink relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
-                            </svg>
+                            <span class="material-symbols-outlined about-card-icon">
+								partner_heart
+							</span>
                         </div>
                         <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Voluntari') }}</h3>
                         <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Descriere Voluntari') }}</p>
@@ -67,9 +67,9 @@
                 <a href="#" class="block">
                     <div class="bg-white p-8 text-center support-card relative overflow-hidden group flex flex-col hover:-translate-y-1 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-transform duration-800 ease-in-out">
                         <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full">
-                            <svg class="w-8 h-8 text-pride-pink relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
+                            <span class="material-symbols-outlined about-card-icon">
+								volunteer_activism
+							</span>
                         </div>
                         <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Donatori') }}</h3>
                         <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Descriere Donatori') }}</p>
@@ -83,9 +83,9 @@
                 <a href="#" class="block">
                     <div class="bg-white p-8 text-center support-card relative overflow-hidden group flex flex-col hover:-translate-y-1 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-transform duration-800 ease-in-out">
                         <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full">
-                            <svg class="w-8 h-8 text-pride-pink relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 001.06.44l1.19 1.189a3 3 0 00-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75-.75v3.75c0 .415.336.75.75.75z"/>
-                            </svg>
+                            <span class="material-symbols-outlined about-card-icon">
+								handshake
+							</span>
                         </div>
                         <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Parteneri') }}</h3>
                         <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Descriere Parteneri') }}</p>
@@ -110,22 +110,22 @@
                             {{ __('Bucharest Pride') }}<br>
                     <span class="text-pride-pink">{{ __('by ACCEPT') }}</span>
                 </h2>
-                <p class="text-white/60 text-base sm:text-lg mt-8 max-w-lg leading-relaxed">{{ __('Descriere Despre') }}</p>
+                <p class="text-white text-sm sm:text-lg mt-8 max-w-lg leading-relaxed">{{ __('Descriere Despre') }}</p>
             </div>
-            <div class="lg:col-span-4 grid md:grid-cols-3 gap-5 items-stretch lg:grid-cols-2 self-end">
-                <div class="border border-white/20 p-8 text-center">
+            <div class="lg:col-span-4 grid md:grid-cols-3 gap-5 items-stretch lg:grid-cols-2 self-end font-sm">
+                <div class="border border-white p-8 text-center">
                     <div class="font-head font-bold text-5xl text-pride-pink">+20</div>
                     <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('ANI DE ISTORIE') }}</p>
                 </div>
-                <div class="border border-white/20 p-8 text-center">
+                <div class="border border-white p-8 text-center">
                     <div class="font-head font-bold text-5xl text-white">500+</div>
                     <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('EVENIMENTE') }}</p>
                 </div>
-                <div class="border border-white/20 p-8 text-center">
+                <div class="border border-white p-8 text-center">
                     <div class="font-head font-bold text-5xl text-white">300+</div>
                     <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('PARTENERI') }}</p>
                 </div>
-                <div class="border border-white/20 p-8 text-center">
+                <div class="border border-white p-8 text-center">
                     <div class="font-head font-bold text-5xl text-pride-pink">35 000+</div>
                     <p class="font-head font-medium text-xs text-white/50 mt-2 tracking-[0.12em] uppercase">{{ __('PARTICIPANȚI') }}</p>
                 </div>
@@ -197,7 +197,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-6 gap-8 items-center">
             {{-- Left Column (2 cols) --}}
             <div class="lg:col-span-2">
-                <h2 class="font-head font-bold text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.9] mb-6">{{ __('Marșul Bucharest Pride') }}</h2>
+                <h2 class="font-head font-bold text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.9] mb-6">{{ __('Marșul Bucharest PRIDE') }}</h2>
                 
                 <div class="space-y-4">
                     <p class="text-white/70 max-w-xl mx-auto mb-10 leading-relaxed">{{ __('Descriere Marș') }}</p>
@@ -275,9 +275,8 @@
 
 {{-- NEWSLETTER --}}
 <section class="py-20 sm:py-24 bg-pride-pink relative overflow-hidden clip-top">
-    <div class="absolute inset-0 halftone"></div>
     <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
-        <h2 class="font-head font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-[0.9] mb-4">{{ __('Fii la curent cu toate noutățile ACCEPT') }}</h2>
+        <h2 class="font-head font-bold text-white text-2xl sm:text-3xl lg:text-4xl leading-[0.9] mb-4">{{ __('Fii la curent cu toate noutățile ACCEPT') }}</h2>
         <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" @submit.prevent>
             <input type="email" placeholder="{{ __('Enter your email') }}" class="flex-1 px-5 py-3 border-2 border-white bg-transparent text-white placeholder-white/60 text-sm uppercase tracking-wider focus:outline-none focus:bg-white/10 font-head">
             <button type="submit" class="btn-black border-white min-w-[140px]">{{ __('Trimite') }}</button>
