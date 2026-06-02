@@ -38,28 +38,28 @@
     </div>
 </section>
 
-<section id="sponsors" class="py-20 bg-pride-gray dark:bg-pride-black">
+<section id="sponsors" class="py-20 bg-pride-pink dark:bg-pride-black text-white dark:bg-pride-pink">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center gap-3 mb-6">
-            <h2 class="text-3xl font-bold text-pride-black dark:text-white ml-2">{{ __('Donează pentru Bucharest PRIDE') }}</h2>
+            <h2 class="text-3xl font-bold ml-2">{{ __('Donează pentru Bucharest PRIDE') }}</h2>
         </div>
-        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
+        <p class="text-lg leading-relaxed mb-4">
             {{ __('Bucharest PRIDE este construit prin solidaritate și susținut de oameni care cred că vizibilitatea, cultura și drepturile merită apărate și celebrate. Donațiile ne ajută să organizăm evenimente accesibile și sigure, să susținem programul artistic și comunitar și să păstrăm PRIDE deschis cât mai multor oameni.') }}
         </p>
-        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
+        <p class="text-lg leading-relaxed mb-4">
             {{ __('Poți susține Bucharest PRIDE prin transfer bancar în conturile ACCEPT, deschise la ING Bank (SWIFT: INGBROBU):') }}
         </p>
-		<p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed">
+		<p class="text-lg leading-relaxed">
             <b>RON:</b> RO19INGB0001000129678915
         </p>
-		<p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed">
+		<p class="text-lg leading-relaxed">
             <b>USD:</b> RO65INGB0001000129674013
         </p>
-		<p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
+		<p class="text-lg leading-relaxed mb-4">
             <b>EUR:</b> RO11INGB0001000129670717
         </p>	
-		<p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
-            {{ __('Dacă dorești să susții Bucharest PRIDE prin sponsorizare ca persoană juridică, scrie-ne direct la') }} <a href="mailto:victor@acceptromania.ro"  class="text-pride-pink">victor@acceptromania.ro</a>
+		<p class="text-lg leading-relaxed mb-4">
+            {{ __('Dacă dorești să susții Bucharest PRIDE prin sponsorizare ca persoană juridică, scrie-ne direct la') }} <a href="mailto:victor@acceptromania.ro"  class="text-pride-black">victor@acceptromania.ro</a>
         </p>
     </div>
 </section>

@@ -54,26 +54,26 @@
     </div>
 </section>
 
-<section id="bucharest-pride" class="py-20 bg-pride-gray dark:bg-pride-black">
+<section id="bucharest-pride" class="py-20 bg-pride-pink dark:bg-pride-black text-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 items-center text-center">
 		<div class="flex justify-center mb-8">
 			<img src="/images/logo_bucharest_pride.png" 
-				 class="w-1/2 h-auto max-w-[300px] brightness-0" 
+				 class="w-1/2 h-auto max-w-[300px] brightness-0 invert" 
 				 alt="Accept Logo">
 		</div>
-		<h1 class="text-4xl font-bold text-pride-black text-center mb-8">
+		<h1 class="text-4xl font-bold text-center mb-8">
 			{{ __('Organizăm Bucharest PRIDE') }}
 		</h1>
-        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
+        <p class="text-lg leading-relaxed mb-4">
             {{ __('Bucharest PRIDE este mai mult decât un marș sau un festival. Este un spațiu de comunitate, cultură și revendicare, construit de și pentru persoane LGBTI+ și pentru toți cei care cred într-o societate în care libertatea și demnitatea nu sunt negociabile.') }}
         </p>
-        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
+        <p class="text-lg leading-relaxed mb-4">
             {{ __('De peste două decenii, Bucharest PRIDE aduce împreună mii de oameni prin evenimente culturale, dezbateri, artă, solidaritate și activism. Este un loc al întâlnirilor și al vizibilității, dar și un spațiu în care vorbim deschis despre realitățile pe care comunitatea le trăiește încă — discriminare, excludere, lipsa protecției juridice sau nevoia de a fi văzuți și respectați așa cum suntem. PRIDE înseamnă bucurie și celebrare, dar și memorie, curaj și responsabilitatea de a continua drumul deschis de generațiile care au luptat înaintea noastră.') }}
         </p>
-        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
+        <p class="text-lg leading-relaxed mb-4">
             {{ __('Tema Bucharest PRIDE 2026 ') }} <b> -- ALL OF US -- </b> {{ __('vorbește despre apartenență și puterea de a merge împreună. Despre o comunitate diversă, în care fiecare voce contează și în care nimeni nu ar trebui lăsat în urmă. Într-un context social și politic tot mai polarizat, ALL OF US este o invitație la solidaritate, grijă și prezență.') }}
         </p>
-        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
+        <p class="text-lg leading-relaxed mb-4">
             {{ __('Bucharest PRIDE este organizat de ACCEPT împreună cu parteneri, artiști, voluntari și o comunitate care îl construiește an de an. În spatele fiecărei ediții stau ani de activism, organizare și oameni care au refuzat să accepte invizibilitatea. Astăzi, Bucharest PRIDE continuă să fie unul dintre cele mai importante spații de vizibilitate și mobilizare pentru comunitatea LGBTI+ din România.') }}
         </p>
     </div>
