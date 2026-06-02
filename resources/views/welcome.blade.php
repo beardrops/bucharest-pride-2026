@@ -190,7 +190,7 @@
         <p class="text-white/70 max-w-xl mx-auto leading-relaxed">19:00 - {{ __('Sosire la Pride Park | Izvor') }}</p>
         <p class="text-white/70 max-w-xl mx-auto leading-relaxed">19:30 - {{ __('Revendicări & Pride Party') }}</p>
         <div class="mt-8 mx-auto max-w-4xl">
-            <img src="/images/traseu_mars.png" alt="Traseul Marșului Bucharest Pride" class="w-full h-auto rounded-lg shadow-lg">
+            <img src="/images/traseu_mars.png" alt="Traseul Marșului Bucharest Pride" class="w-full h-auto rounded-lg">
         </div>
     </div>
 </section>
@@ -254,11 +254,10 @@
 <section class="py-20 sm:py-24 bg-pride-pink relative overflow-hidden clip-top">
     <div class="absolute inset-0 halftone"></div>
     <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
-        <h2 class="font-head font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-[0.9] mb-4">KEEP PRIDE<br>LOUD &amp; FREE</h2>
-        <p class="text-white/80 mb-8 max-w-md mx-auto leading-relaxed">{{ __('Newsletter desc') }}</p>
+        <h2 class="font-head font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-[0.9] mb-4">{{ __('Fii la curent cu toate noutățile ACCEPT') }}</h2>
         <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" @submit.prevent>
             <input type="email" placeholder="{{ __('Enter your email') }}" class="flex-1 px-5 py-3 border-2 border-white bg-transparent text-white placeholder-white/60 text-sm uppercase tracking-wider focus:outline-none focus:bg-white/10 font-head">
-            <button type="submit" class="btn-black border-white min-w-[140px]">{{ __('Subscribe') }}</button>
+            <button type="submit" class="btn-black border-white min-w-[140px]">{{ __('Trimite') }}</button>
         </form>
     </div>
 </section>

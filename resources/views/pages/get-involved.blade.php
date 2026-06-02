@@ -27,10 +27,13 @@
             <h2 class="text-3xl font-bold text-pride-black dark:text-white ml-2">{{ __('Volunteer') }}</h2>
         </div>
         <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
-            {{ __('Volunteer desc') }}
+            {{ __('Voluntari Bucharest PRIDE') }}
         </p>
         <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed">
-            {{ __('We are always looking for passionate volunteers to help with event organization, parade marshaling, stage management, communications, and more. No experience necessary — just bring your enthusiasm!') }}
+            {{ __('Bucharest PRIDE este pus în mișcare de o echipă dedicată de voluntarix care contribuie cu energie, grijă și timp pentru comunitate. Pentru ediția 2026, înscrierile pentru echipa de voluntari s-au încheiat, iar locurile disponibile au fost ocupate.') }}
+        </p>
+        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed">
+            {{ __('Chiar și așa, există multe feluri prin care poți fi aproape de PRIDE — participând la evenimente, susținând comunitatea, distribuind mesajele noastre și contribuind la energia care face acest spațiu posibil. Ne bucurăm să te avem alături și sperăm să ne revedem în viitoarele ediții ale echipei de voluntarix.') }}
         </p>
     </div>
 </section>
@@ -38,13 +41,25 @@
 <section id="sponsors" class="py-20 bg-pride-gray dark:bg-pride-black">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center gap-3 mb-6">
-            <h2 class="text-3xl font-bold text-pride-black dark:text-white ml-2">{{ __('Sponsors') }}</h2>
+            <h2 class="text-3xl font-bold text-pride-black dark:text-white ml-2">{{ __('Donează pentru Bucharest PRIDE') }}</h2>
         </div>
         <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
-            {{ __('Sponsor desc') }}
+            {{ __('Bucharest PRIDE este construit prin solidaritate și susținut de oameni care cred că vizibilitatea, cultura și drepturile merită apărate și celebrate. Donațiile ne ajută să organizăm evenimente accesibile și sigure, să susținem programul artistic și comunitar și să păstrăm PRIDE deschis cât mai multor oameni.') }}
         </p>
-        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed">
-            {{ __('We offer a range of sponsorship packages for businesses of all sizes. From event visibility to community engagement programs, your support makes Pride possible.') }}
+        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
+            {{ __('Poți susține Bucharest PRIDE prin transfer bancar în conturile ACCEPT, deschise la ING Bank (SWIFT: INGBROBU):') }}
+        </p>
+		<p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed">
+            <b>RON:</b> RO19INGB0001000129678915
+        </p>
+		<p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed">
+            <b>USD:</b> RO65INGB0001000129674013
+        </p>
+		<p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
+            <b>EUR:</b> RO11INGB0001000129670717
+        </p>	
+		<p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
+            {{ __('Dacă dorești să susții Bucharest PRIDE prin sponsorizare ca persoană juridică, scrie-ne direct la') }} <a href="mailto:victor@acceptromania.ro"  class="text-pride-pink">victor@acceptromania.ro</a>
         </p>
     </div>
 </section>
@@ -52,24 +67,13 @@
 <section id="donations" class="py-20">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center gap-3 mb-6">
-            <h2 class="text-3xl font-bold text-pride-black dark:text-white ml-2">{{ __('Donations') }}</h2>
+            <h2 class="text-3xl font-bold text-pride-black dark:text-white ml-2">{{ __('Spații partenere & evenimente comunitare') }}</h2>
         </div>
         <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed mb-4">
-            {{ __('Donate desc') }}
+            {{ __('Bucharest PRIDE crește prin colaborări și prin spațiile care aleg să fie parte din comunitate. În fiecare an, locații, organizații și grupuri independente contribuie la program prin evenimente, inițiative culturale și întâlniri care dau viață PRIDE Week.') }}
         </p>
         <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed">
-            {{ __('As a non-profit organization, every donation helps us keep Pride accessible and free for everyone. Your contribution supports our year-round community programs, advocacy work, and the annual festival.') }}
-        </p>
-    </div>
-</section>
-
-<section id="community" class="py-20 bg-pride-gray dark:bg-pride-black">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center gap-3 mb-6">
-            <h2 class="text-3xl font-bold text-pride-black dark:text-white ml-2">{{ __('Community') }}</h2>
-        </div>
-        <p class="text-lg text-gray-600 dark:text-white/60 leading-relaxed">
-            {{ __('Bucharest Pride is more than a festival — it is a community. Throughout the year, we organize meetups, workshops, support groups, and cultural events. We believe in building a strong, resilient, and visible LGBTQ+ community in Romania. Join us.') }}
+            {{ __('Pentru ediția 2026, apelul pentru evenimente comunitare s-a încheiat, iar programul este deja în construcție. Dacă dorești să fii alături de Bucharest PRIDE în 2027 — fie ca spațiu partener, inițiator de evenimente sau colaborator — scrie-ne la') }} <a href="mailto:bucharestpride@acceptromania.ro"  class="text-pride-pink">bucharestpride@acceptromania.ro</a>
         </p>
     </div>
 </section>

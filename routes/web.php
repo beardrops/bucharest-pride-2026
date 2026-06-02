@@ -47,6 +47,22 @@ Route::get('/bucharest-pride-2026', function () {
     return view('pages.pride-2026');
 })->name('pride-2026');
 
+Route::get('/mission', function () {
+    $locale = session('locale', config('app.locale'));
+    if (in_array($locale, ['en', 'ro'])) {
+        app()->setLocale($locale);
+    }
+    return view('pages.mission');
+})->name('mission');
+
+Route::get('/press-release', function () {
+    $locale = session('locale', config('app.locale'));
+    if (in_array($locale, ['en', 'ro'])) {
+        app()->setLocale($locale);
+    }
+    return view('pages.press-release');
+})->name('press-release');
+
 Route::get('/events', [PublicEventController::class, 'index'])->name('events.index');
 Route::get('/events/{event:slug}', [PublicEventController::class, 'show'])->name('events.show');
 
