@@ -52,6 +52,7 @@ class EventController extends Controller
     {
         $data = $request->validated();
         $data['slug'] = $data['slug'] ?? Str::slug($data['title']);
+        $data['is_published'] = $request->has('is_published');
 
         if ($request->hasFile('image')) {
             if ($event->image) {

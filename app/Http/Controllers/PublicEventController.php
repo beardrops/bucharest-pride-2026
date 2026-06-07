@@ -13,7 +13,7 @@ class PublicEventController extends Controller
             app()->setLocale($locale);
         }
 
-        $events = Event::where('is_published', true)->latest()->paginate(12);
+        $events = Event::where('is_published', true)->orderBy('start_date', 'asc')->paginate(12);
 
         return view('events.index', compact('events'));
     }

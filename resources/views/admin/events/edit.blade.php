@@ -45,6 +45,20 @@
                             <x-input-error :messages="$errors->get('maps_url')" class="mt-2" />
                         </div>
 
+                        <div>
+                            <x-input-label for="ticket_url" :value="__('Ticket URL')" />
+                            <x-text-input id="ticket_url" class="mt-1 block w-full" type="url" name="ticket_url" :value="old('ticket_url', $event->ticket_url)" placeholder="https://www.eventbrite.com/e/..." />
+                            <p class="mt-1 text-xs text-gray-500 dark:text-white/60">Link to ticket seller page. Leave empty if the event doesn't require tickets.</p>
+                            <x-input-error :messages="$errors->get('ticket_url')" class="mt-2" />
+                        </div>
+
+                        <div>
+                            <x-input-label for="ticket_label" :value="__('Ticket Button Label')" />
+                            <x-text-input id="ticket_label" class="mt-1 block w-full" type="text" name="ticket_label" :value="old('ticket_label', $event->ticket_label)" placeholder="e.g. Buy Now, Get Tickets, Cumpără Bilete" />
+                            <p class="mt-1 text-xs text-gray-500 dark:text-white/60">Custom text for the ticket button. Leave empty to use default "Get Tickets".</p>
+                            <x-input-error :messages="$errors->get('ticket_label')" class="mt-2" />
+                        </div>
+
                         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <div>
                                 <x-input-label for="start_date" :value="__('Start Date')" />

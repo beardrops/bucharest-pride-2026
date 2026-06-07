@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PublicEventController;
+use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
@@ -10,7 +11,12 @@ Route::get('/', function () {
     if (in_array($locale, ['en', 'ro'])) {
         app()->setLocale($locale);
     }
-    return view('welcome');
+    $events = Event::where('is_published', true)
+        ->where('start_date', '>=', now())
+        ->orderBy('start_date', 'asc')
+        ->take(6)
+        ->get();
+    return view('welcome', compact('events'));
 })->name('home');
 
 // Authentication Routes
@@ -26,7 +32,12 @@ Route::get('/locale/{locale}', function (string $locale) {
     }
     session()->put('locale', $locale);
     app()->setLocale($locale);
-    return view('welcome');
+    $events = Event::where('is_published', true)
+        ->where('start_date', '>=', now())
+        ->orderBy('start_date', 'asc')
+        ->take(6)
+        ->get();
+    return view('welcome', compact('events'));
 })->name('locale.switch');
 
 // Existing routes follow below...

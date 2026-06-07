@@ -29,6 +29,7 @@
                                         <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-white/70">Location</th>
                                         <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-white/70">Date</th>
                                         <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-white/70">Status</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-white/70">Tickets</th>
                                         <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-white/70">Author</th>
                                         <th class="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-white/70">Actions</th>
                                     </tr>
@@ -51,6 +52,13 @@
                                                     <span class="inline-flex rounded-full bg-pride-pink-light px-2 text-xs font-semibold leading-5 text-pride-blue dark:bg-pride-navy/30 dark:text-pride-pink">Published</span>
                                                 @else
                                                     <span class="inline-flex rounded-full bg-pride-pink-light px-2 text-xs font-semibold leading-5 text-pride-pink dark:bg-pride-navy/30 dark:text-pride-pink">Draft</span>
+                                                @endif
+                                            </td>
+                                            <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-white/60">
+                                                @if($event->ticket_url)
+                                                    <a href="{{ $event->ticket_url }}" target="_blank" rel="noopener" class="text-pride-pink hover:underline">{{ __('Yes') }}</a>
+                                                @else
+                                                    <span class="text-gray-400">{{ __('No') }}</span>
                                                 @endif
                                             </td>
                                             <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-white/60">{{ $event->user->name }}</td>

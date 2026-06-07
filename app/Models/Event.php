@@ -17,6 +17,8 @@ class Event extends Model
         'description',
         'location',
         'maps_url',
+        'ticket_url',
+        'ticket_label',
         'start_date',
         'end_date',
         'image',

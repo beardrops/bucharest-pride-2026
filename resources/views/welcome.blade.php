@@ -57,10 +57,10 @@
                         </div>
                         <h3 class="font-head font-semibold text-xl text-pride-black mb-3 uppercase relative z-10">{{ __('Voluntari') }}</h3>
                         <p class="text-pride-black/70 text-sm leading-relaxed mb-6 relative z-10">{{ __('Descriere Voluntari') }}</p>
-                        <p class="mt-auto self-center text-sm text-pride-black font-bold">{{ __('IMPLICĂ-TE') }} 
+                        <p class="mt-auto self-center text-sm text-pride-black font-bold">{{ __('IMPLICĂ-TE') }}
 							<span class="inline-block ml-1 relative top-1.5">
 								<i class="material-icons">arrow_right_alt</i>
-							</span> 
+							</span>
 						</p>
                     </div>
                 </a>
@@ -76,7 +76,7 @@
 							<p class="mt-auto self-center text-sm text-pride-black font-bold">{{ __('DONEAZĂ') }}
 								<span class="inline-block ml-1 relative top-1.5">
 									<i class="material-icons">arrow_right_alt</i>
-								</span> 
+								</span>
 							</p>
                     </div>
                 </a>
@@ -92,7 +92,7 @@
                         <p class="mt-auto self-center text-sm text-pride-black font-bold">{{ __('SUSȚINE')}}
 							<span class="inline-block ml-1 relative top-1.5">
 								<i class="material-icons">arrow_right_alt</i>
-							</span> 
+							</span>
 						</p>
                     </div>
                 </a>
@@ -192,13 +192,13 @@
 
 {{-- PARADE --}}
 <section id="parade" class="py-24 sm:py-28 bg-pride-pink relative overflow-hidden">
-    
+
     <div class="max-w-[1180px] mx-auto px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-6 gap-8 items-center">
             {{-- Left Column (2 cols) --}}
             <div class="lg:col-span-2">
                 <h2 class="font-head font-bold text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.9] mb-6">{{ __('Marșul Bucharest PRIDE') }}</h2>
-                
+
                 <div class="space-y-4">
                     <p class="text-white/70 max-w-xl mx-auto mb-10 leading-relaxed">{{ __('Descriere Marș') }}</p>
 					<p class="text-white/70 max-w-xl mx-auto leading-relaxed">16:00 - {{ __('Adunare la Piața Victorie') }}</p>
@@ -207,11 +207,11 @@
 					<p class="text-white/70 max-w-xl mx-auto leading-relaxed">19:30 - {{ __('Revendicări & Pride Party') }}</p>
                 </div>
             </div>
-            
+
             {{-- Right Column (4 cols) --}}
             <div class="lg:col-span-4 flex justify-center lg:justify-end">
-                <img src="/images/traseu_mars.png" 
-                     alt="{{ __('Bucharest Pride Parade Route') }}" 
+                <img src="/images/traseu_mars.png"
+                     alt="{{ __('Bucharest Pride Parade Route') }}"
                      class="w-full max-w-full lg:max-w-none rounded-lg shadow-lg">
             </div>
         </div>
@@ -225,56 +225,149 @@
             <p class="font-head font-semibold text-pride-pink text-sm mb-3 tracking-[0.15em]">{{ __('Program') }}</p>
             <h2 class="font-head font-bold text-pride-black text-4xl sm:text-5xl lg:text-6xl">{{ __("Events You Can't Miss") }}</h2>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-white border-2 border-pride-black overflow-hidden group">
-                <div class="h-48 bg-pride-pink flex items-center justify-center relative">
-                    <div class="absolute inset-0 halftone opacity-40"></div>
-                    <svg class="w-14 h-14 text-white/70 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0A2.701 2.701 0 003 15.546M21 15.546V5.25A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25v10.296m18 0v4.454A2.25 2.25 0 0118.75 22H5.25A2.25 2.25 0 013 19.75v-4.454"/>
-                    </svg>
-                </div>
-                <div class="p-6">
-                    <p class="font-head font-semibold text-xs text-pride-pink mb-2 tracking-[0.12em]">27 IUNIE</p>
-                    <h3 class="font-head font-semibold text-lg text-pride-black mb-2 uppercase">{{ __('Opening Ceremony') }}</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">{{ __('Opening Ceremony desc') }}</p>
+
+        @if($events->count())
+        <div x-data="eventsCarousel(@js($events))" x-init="init()" class="relative overflow-hidden">
+            <div class="overflow-hidden">
+                <div class="flex gap-6 transition-transform duration-500 ease-in-out"
+                     x-ref="track"
+                     @mouseenter="pause()"
+                     @mouseleave="resume()">
+                    <template x-for="event in events" :key="event.slug">
+                        <a :href="'/events/' + event.slug" class="min-w-[calc(33.333%-16px)] bg-white border-2 border-pride-black overflow-hidden group block">
+                            <div class="h-48 relative overflow-hidden" :class="event.image ? '' : (event.id % 2 === 0 ? 'bg-pride-pink' : 'bg-pride-black')">
+                                <template x-if="event.image">
+                                    <img :src="'/storage/' + event.image" :alt="event.title" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                </template>
+                                <template x-if="!event.image">
+                                    <div class="absolute inset-0 halftone opacity-40"></div>
+                                </template>
+                                <div class="absolute top-3 left-3 bg-pride-pink text-white text-xs font-head font-semibold px-3 py-1" x-text="formatDate(event.start_date)"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-head font-semibold text-lg text-pride-black mb-2 uppercase" x-text="event.title"></h3>
+                                <p class="text-sm text-gray-600 leading-relaxed mb-3 line-clamp-2" x-text="truncate(event.description, 120)"></p>
+                                <div class="flex items-center gap-1 text-xs text-pride-pink font-medium mb-3">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                    <span x-text="event.location"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </template>
                 </div>
             </div>
-            <div class="bg-white border-2 border-pride-black overflow-hidden group">
-                <div class="h-48 bg-pride-black flex items-center justify-center relative">
-                    <div class="absolute inset-0 halftone opacity-20"></div>
-                    <svg class="w-14 h-14 text-white/70 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
-                    </svg>
-                </div>
-                <div class="p-6">
-                    <p class="font-head font-semibold text-xs text-pride-pink mb-2 tracking-[0.12em]">28 — 30 IUNIE</p>
-                    <h3 class="font-head font-semibold text-lg text-pride-black mb-2 uppercase">{{ __('Human Rights Summit') }}</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">{{ __('Human Rights Summit desc') }}</p>
-                </div>
-            </div>
-            <div class="bg-white border-2 border-pride-black overflow-hidden group">
-                <div class="h-48 bg-pride-pink flex items-center justify-center relative">
-                    <div class="absolute inset-0 halftone opacity-40"></div>
-                    <svg class="w-14 h-14 text-white/70 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"/>
-                    </svg>
-                </div>
-                <div class="p-6">
-                    <p class="font-head font-semibold text-xs text-pride-pink mb-2 tracking-[0.12em]">1 — 5 IULIE</p>
-                    <h3 class="font-head font-semibold text-lg text-pride-black mb-2 uppercase">{{ __('Pride Festival') }}</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">{{ __('Pride Festival desc') }}</p>
-                </div>
+            <div class="flex items-center justify-center gap-4 mt-8">
+                <button @click="prev" class="w-12 h-12 flex items-center justify-center border-2 border-pride-black hover:bg-pride-black hover:text-white transition duration-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <a href="{{ route('events.index') }}" class="btn-pri">{{ __('See All Events') }} &rarr;</a>
+                <button @click="next" class="w-12 h-12 flex items-center justify-center border-2 border-pride-black hover:bg-pride-black hover:text-white transition duration-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
             </div>
         </div>
-        <div class="text-center mt-12">
-            <a href="{{ route('events.index') }}" class="btn-pri">{{ __('See All Events') }} &rarr;</a>
+        @else
+        <div class="text-center py-12">
+            <p class="text-gray-500 text-lg">{{ __('No events scheduled yet.') }}</p>
         </div>
+        @endif
     </div>
 </section>
 
+<script>
+function eventsCarousel(eventsData) {
+    return {
+        events: eventsData,
+        currentIndex: 0,
+        itemsPerView: 3,
+        isPaused: false,
+        autoplayInterval: null,
+
+        init() {
+            this.updateItemsPerView();
+            window.addEventListener('resize', () => {
+                this.updateItemsPerView();
+            });
+            this.startAutoplay();
+        },
+
+        updateItemsPerView() {
+            const width = window.innerWidth;
+            if (width < 768) {
+                this.itemsPerView = 1;
+            } else if (width < 1024) {
+                this.itemsPerView = 2;
+            } else {
+                this.itemsPerView = 3;
+            }
+            this.updateTransform();
+        },
+
+        prev() {
+            this.currentIndex--;
+            if (this.currentIndex < 0) {
+                this.currentIndex = this.totalPages - 1;
+            }
+            this.updateTransform();
+        },
+
+        next() {
+            this.currentIndex++;
+            if (this.currentIndex >= this.totalPages) {
+                this.currentIndex = 0;
+            }
+            this.updateTransform();
+        },
+
+        get totalPages() {
+            return Math.max(1, this.events.length - this.itemsPerView + 1);
+        },
+
+        updateTransform() {
+            const track = this.$refs.track;
+            if (!track) return;
+            const gap = 24;
+            const containerWidth = track.parentElement.offsetWidth;
+            const itemWidth = (containerWidth - (this.itemsPerView - 1) * gap) / this.itemsPerView;
+            const translateX = -(this.currentIndex * (itemWidth + gap));
+            track.style.transform = `translateX(${translateX}px)`;
+        },
+
+        startAutoplay() {
+            if (this.autoplayInterval) clearInterval(this.autoplayInterval);
+            this.autoplayInterval = setInterval(() => {
+                if (!this.isPaused) {
+                    this.next();
+                }
+            }, 4000);
+        },
+
+        pause() {
+            this.isPaused = true;
+        },
+
+        resume() {
+            this.isPaused = false;
+        },
+
+        formatDate(dateStr) {
+            if (!dateStr) return '';
+            const months = ['Ian', 'Feb', 'Mar', 'Apr', 'Mai', 'Iun', 'Iul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const d = new Date(dateStr);
+            return d.getDate() + ' ' + months[d.getMonth()];
+        },
+
+        truncate(str, length) {
+            if (!str) return '';
+            if (str.length <= length) return str;
+            return str.substring(0, length).trim() + '...';
+        }
+    };
+}
+</script>
+
 {{-- NEWSLETTER --}}
-<section class="py-20 sm:py-24 bg-pride-pink relative overflow-hidden clip-top">
+<section class="py-20 sm:py-24 bg-pride-pink relative overflow-hidden">
     <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
         <h2 class="font-head font-bold text-white text-2xl sm:text-3xl lg:text-4xl leading-[0.9] mb-4">{{ __('Fii la curent cu toate noutățile ACCEPT') }}</h2>
         <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" @submit.prevent>

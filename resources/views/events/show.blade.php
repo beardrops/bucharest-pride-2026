@@ -42,9 +42,13 @@
         </div>
 
         @if($event->maps_url)
-            <div class="rounded-2xl overflow-hidden shadow-md">
+            <div class="rounded-2xl overflow-hidden shadow-md mb-10">
                 <iframe src="{{ $event->maps_url }}" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+        @endif
+
+        @if($event->ticket_url)
+            <a href="{{ $event->ticket_url }}" target="_blank" rel="noopener" class="btn-pri inline-block">{{ $event->ticket_label ?? __('Get Tickets') }}</a>
         @endif
     </div>
 </section>

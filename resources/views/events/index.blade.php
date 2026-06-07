@@ -10,55 +10,77 @@
     @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased bg-white text-pride-black">
+<body class="font-body antialiased bg-white text-pride-black">
 
 @include('partials.navbar')
 
-<section class="pt-32 pb-20 bg-gradient-to-br from-pride-navy via-pride-pink to-pride-pink text-white text-center">
-    <div class="max-w-4xl mx-auto px-4">
-        <h1 class="text-5xl font-bold mb-4">{{ __('Events') }}</h1>
-        <p class="text-xl text-white/80">{{ __("Events You Can't Miss") }}</p>
+{{-- HERO --}}
+<section class="relative pt-32 pb-20 bg-pride-black overflow-hidden">
+    <div class="max-w-[1180px] mx-auto px-6 lg:px-8 relative z-10">
+        <p class="font-head font-semibold text-pride-pink text-sm mb-4 tracking-[0.2em] uppercase">{{ __('Program') }}</p>
+        <h1 class="font-head font-bold text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.9] -tracking-[0.02em]">{{ __('Events') }}</h1>
     </div>
 </section>
 
-<section class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        @if($events->count())
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                @foreach($events as $event)
-                    <a href="{{ route('events.show', $event) }}" class="bg-white dark:bg-pride-black rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition group block">
-                        @if($event->image)
-                            <div class="h-48 overflow-hidden">
-                                <img src="{{ Storage::url($event->image) }}" alt="{{ $event->title }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                            </div>
-                        @else
-                            <div class="h-48 bg-gradient-to-br from-pride-navy to-pride-pink flex items-center justify-center">
-                                <svg class="w-16 h-16 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"/>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"/>
-                                </svg>
-                            </div>
-                        @endif
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 text-sm text-pride-pink dark:text-pride-pink font-medium mb-2">
-                                <span class="w-2 h-2 rounded-full bg-pride-pink dark:bg-pride-pink"></span>
-                                {{ $event->start_date->format('M j') }}{{ $event->end_date && $event->end_date->format('M j') !== $event->start_date->format('M j') ? ' – ' . $event->end_date->format('M j') : '' }}
-                            </div>
-                            <h3 class="text-lg font-bold text-pride-black dark:text-white group-hover:text-pride-pink dark:group-hover:text-pride-pink transition">{{ $event->title }}</h3>
-                            <p class="text-gray-600 dark:text-white/60 text-sm mt-2 line-clamp-2">{{ $event->location }}</p>
-                        </div>
-                    </a>
-                @endforeach
-            </div>
+{{-- EVENTS LIST --}}
+<section class="py-16 sm:py-24 bg-pride-beige">
+    <div class="max-w-[1180px] mx-auto px-6 lg:px-8">
 
-            <div class="mt-10">
-                {{ $events->links() }}
+        @if($events->count())
+        <div class="space-y-12">
+            @foreach($events as $event)
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 bg-white border-2 border-pride-black overflow-hidden mb-2">
+                {{-- Left column: Image --}}
+                <div class="lg:col-span-1 relative h-56 lg:h-auto overflow-hidden">
+                    @if($event->image)
+                        <img src="{{ Storage::url($event->image) }}" alt="{{ $event->title }}" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    @else
+                        <div class="w-full h-full bg-pride-pink"></div>
+                    @endif
+                    {{-- Date badge --}}
+                    <div class="absolute top-3 left-3 bg-white border-2 border-pride-black px-2.5 py-1.5 text-center">
+                        <p class="font-head font-bold text-pride-pink text-lg leading-none">{{ $event->start_date->day }}</p>
+                        <p class="font-head font-semibold text-pride-black text-xs uppercase leading-none">{{ $event->start_date->format('M') }}</p>
+                    </div>
+                </div>
+
+                {{-- Right column: Content --}}
+                <div class="lg:col-span-2 p-6 lg:p-8 flex flex-col justify-between">
+                    <div>
+                        {{-- Date range --}}
+                        <p class="text-xs font-head font-semibold text-pride-pink uppercase tracking-[0.1em] mb-2">
+                            {{ $event->start_date->format('F j') }}{{ $event->end_date && $event->end_date->format('M j') !== $event->start_date->format('M j') ? ' — ' . $event->end_date->format('F j') : '' }}
+                        </p>
+
+                        {{-- Title --}}
+                        <h2 class="font-head font-bold text-xl text-pride-black mb-3 leading-tight">{{ $event->title }}</h2>
+
+                        {{-- Description --}}
+                        <p class="text-sm text-gray-600 leading-relaxed mb-3 line-clamp-5">{{ Str::limit($event->description, 150) }}</p>
+
+                        {{-- Location --}}
+                        <p class="text-xs text-gray-500">{{ $event->location }}</p>
+                    </div>
+
+                    {{-- Button --}}
+                    <div class="mt-6 pt-4 border-t border-pride-black/10">
+                        <a href="{{ route('events.show', $event) }}" class="font-head font-semibold text-sm text-pride-black hover:text-pride-pink transition">{{ __('View Details') }} &rarr;</a>
+                    </div>
+                </div>
             </div>
+            @endforeach
+        </div>
+
+        {{-- Pagination --}}
+        <div class="mt-12 flex justify-center">
+            {{ $events->links() }}
+        </div>
         @else
-            <div class="text-center py-20">
-                <p class="text-gray-500 dark:text-white/60 text-lg">{{ __('No events scheduled yet.') }}</p>
-                <a href="{{ route('home') }}" class="inline-block mt-4 text-pride-pink hover:underline">{{ __('Back to home') }}</a>
-            </div>
+        <div class="text-center py-20">
+            <h3 class="font-head font-bold text-xl text-pride-black mb-3">{{ __('No events yet') }}</h3>
+            <p class="text-gray-500 mb-6">{{ __('Check back soon for updates.') }}</p>
+            <a href="{{ route('home') }}" class="btn-pri">{{ __('Back to home') }}</a>
+        </div>
         @endif
     </div>
 </section>
