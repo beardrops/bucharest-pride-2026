@@ -217,62 +217,57 @@
         </div>
     </div>
 </section>
+@if($events->count() > 3)
+    {{-- EVENTS --}}
+    <section id="events" class="py-24 sm:py-28 bg-pride-beige relative">
+        <div class="max-w-[1180px] mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <p class="font-head font-semibold text-pride-pink text-sm mb-3 tracking-[0.15em]">{{ __('Program') }}</p>
+                <h2 class="font-head font-bold text-pride-black text-4xl sm:text-5xl lg:text-6xl">{{ __("Events You Can't Miss") }}</h2>
+            </div>
 
-{{-- EVENTS --}}
-<section id="events" class="py-24 sm:py-28 bg-pride-beige relative">
-    <div class="max-w-[1180px] mx-auto px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16">
-            <p class="font-head font-semibold text-pride-pink text-sm mb-3 tracking-[0.15em]">{{ __('Program') }}</p>
-            <h2 class="font-head font-bold text-pride-black text-4xl sm:text-5xl lg:text-6xl">{{ __("Events You Can't Miss") }}</h2>
-        </div>
-
-        @if($events->count())
-        <div x-data="eventsCarousel(@js($events))" x-init="init()" class="relative overflow-hidden">
-            <div class="overflow-hidden">
-                <div class="flex gap-6 transition-transform duration-500 ease-in-out"
-                     x-ref="track"
-                     @mouseenter="pause()"
-                     @mouseleave="resume()">
-                    <template x-for="event in events" :key="event.slug">
-                        <a :href="'/events/' + event.slug" class="min-w-[calc(33.333%-16px)] bg-white border-2 border-pride-black overflow-hidden group block">
-                            <div class="h-48 relative overflow-hidden" :class="event.image ? '' : (event.id % 2 === 0 ? 'bg-pride-pink' : 'bg-pride-black')">
-                                <template x-if="event.image">
-                                    <img :src="'/storage/' + event.image" :alt="event.title" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                                </template>
-                                <template x-if="!event.image">
-                                    <div class="absolute inset-0 halftone opacity-40"></div>
-                                </template>
-                                <div class="absolute top-3 left-3 bg-pride-pink text-white text-xs font-head font-semibold px-3 py-1" x-text="formatDate(event.start_date)"></div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="font-head font-semibold text-lg text-pride-black mb-2 uppercase" x-text="event.title"></h3>
-                                <p class="text-sm text-gray-600 leading-relaxed mb-3 line-clamp-2" x-text="truncate(event.description, 120)"></p>
-                                <div class="flex items-center gap-1 text-xs text-pride-pink font-medium mb-3">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                                    <span x-text="event.location"></span>
+            <div x-data="eventsCarousel(@js($events))" x-init="init()" class="relative overflow-hidden">
+                <div class="overflow-hidden">
+                    <div class="flex gap-6 transition-transform duration-500 ease-in-out"
+                        x-ref="track"
+                        @mouseenter="pause()"
+                        @mouseleave="resume()">
+                        <template x-for="event in events" :key="event.slug">
+                            <a :href="'/events/' + event.slug" class="min-w-[calc(33.333%-16px)] bg-white border-2 border-pride-black overflow-hidden group block">
+                                <div class="h-48 relative overflow-hidden" :class="event.image ? '' : (event.id % 2 === 0 ? 'bg-pride-pink' : 'bg-pride-black')">
+                                    <template x-if="event.image">
+                                        <img :src="'/storage/' + event.image" :alt="event.title" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                    </template>
+                                    <template x-if="!event.image">
+                                        <div class="absolute inset-0 halftone opacity-40"></div>
+                                    </template>
+                                    <div class="absolute top-3 left-3 bg-pride-pink text-white text-xs font-head font-semibold px-3 py-1" x-text="formatDate(event.start_date)"></div>
                                 </div>
-                            </div>
-                        </a>
-                    </template>
+                                <div class="p-6">
+                                    <h3 class="font-head font-semibold text-lg text-pride-black mb-2 uppercase" x-text="event.title"></h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-3 line-clamp-2" x-text="truncate(event.description, 120)"></p>
+                                    <div class="flex items-center gap-1 text-xs text-pride-pink font-medium mb-3">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <span x-text="event.location"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </template>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-4 mt-8">
+                    <button @click="prev" class="w-12 h-12 flex items-center justify-center border-2 border-pride-black hover:bg-pride-black hover:text-white transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <a href="{{ route('events.index') }}" class="btn-pri">{{ __('See All Events') }} &rarr;</a>
+                    <button @click="next" class="w-12 h-12 flex items-center justify-center border-2 border-pride-black hover:bg-pride-black hover:text-white transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
                 </div>
             </div>
-            <div class="flex items-center justify-center gap-4 mt-8">
-                <button @click="prev" class="w-12 h-12 flex items-center justify-center border-2 border-pride-black hover:bg-pride-black hover:text-white transition duration-200">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-                </button>
-                <a href="{{ route('events.index') }}" class="btn-pri">{{ __('See All Events') }} &rarr;</a>
-                <button @click="next" class="w-12 h-12 flex items-center justify-center border-2 border-pride-black hover:bg-pride-black hover:text-white transition duration-200">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                </button>
-            </div>
         </div>
-        @else
-        <div class="text-center py-12">
-            <p class="text-gray-500 text-lg">{{ __('No events scheduled yet.') }}</p>
-        </div>
-        @endif
-    </div>
-</section>
+    </section>
+@endif
 
 <script>
 function eventsCarousel(eventsData) {
